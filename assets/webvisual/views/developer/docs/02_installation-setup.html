@@ -1,5 +1,5 @@
 <h1 id="installation-amp-setup">Installation &amp; Setup</h1>
-<hr>
+<hr />
 <div class="spacer m-b-2"></div>
 <p>This project is built with
     <a href="http://jekyllrb.com" target="_blank">Jekyll v3.0.3</a> - a popular static site generator endorsed by the good folks at Github. For package management we use
@@ -28,65 +28,65 @@
     <a href="https://nodejs.org/" target="_blank">NodeJS</a> and
     <a href="https://www.python.org" target="_blank">Python</a> (optional). Pull up Terminal and paste the following:</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-</code></pre></div>
+</code></pre> </div>
 <p>Next, add the Homebrew location to your <code class="highlighter-rouge">$PATH</code>. We’ll create a
     <strong>.bash_profile</strong> or edit an existing one.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>touch ~/,bash_profile; open ~/.bash_profile
-</code></pre></div>
+</code></pre> </div>
 <p>Then add the following to your file and save. This will allow us to run future commands without giving Administrator access.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>export PATH="/usr/local/bin:$PATH"
-</code></pre></div>
+</code></pre> </div>
 <h3 id="ruby">02. Ruby</h3>
 <p>Ruby typically comes installed with MacOS, although it’s always good to have the latest version. We recommend installing
     <em>or updating</em> Ruby through
     <a href="https://rvm.io" target="_blank">RVM</a>.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>\curl -sSL https://get.rvm.io | bash -s stable --ruby
-</code></pre></div>
+</code></pre> </div>
 <p>Next,
     <strong>reboot the terminal window</strong>. If successful you should be able to see the new version number.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>ruby -v
-</code></pre></div>
+</code></pre> </div>
 <p>MacOS will have RubyGems installed by default, but we’ll grab the latest version.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>gem update --system
-</code></pre></div>
+</code></pre> </div>
 <p>To test your RubyGems install, you can now use it to grab
     <a href="http://bundler.io">Bundler</a>. We use Bundler to install Ruby dependencies such as
     <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>gem install bundler
-</code></pre></div>
+</code></pre> </div>
 <h3 id="nodejs">03. NodeJS</h3>
 <p>Next, install Node with Homebrew. Please be patient, as this can take some time.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>brew install -v node
-</code></pre></div>
+</code></pre> </div>
 <p>To test your Node install, try installing
     <a href="http://gruntjs.com/" target="_blank">Grunt</a> which will be used to run the build process.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>npm install -g grunt-cli
-</code></pre></div>
+</code></pre> </div>
 <p>Next install
     <a href="http://bower.io" target="_blank">Bower</a>. We use Bower to retrieve front-end dependencies such as Bootstrap, JQuery and others.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>npm install -g bower
-</code></pre></div>
+</code></pre> </div>
 <h3 id="python">04. Python</h3>
 <p>MacOS will have Python installed by default, but we’ll grab the latest version. In this case
     <strong>Python is optional</strong>. We use it in our Grunt File to create an ad-hoc local server to immediately serve the contents of our processed build.</p>
 <p>If successful, you should be able to see the version.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>python
-</code></pre></div>
+</code></pre> </div>
 <div class="spacer m-b-2"></div>
 <h2 id="start-the-server">Start the Server</h2>
 <p>Once everything is installed, you can clone the codebase or
     <a href="https://github.com/liquidvisual/theweddingwarren.com" target="_blank">download</a> the contents from our Github repo.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>git clone git@github.com:liquidvisual/.git
-</code></pre></div>
+</code></pre> </div>
 <p>Now that you have the project, we can download its dependencies.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>cd 
 bower install     # =&gt; for front-end dependencies (Eg. Bootstrap, JQuery etc)
 bundle install    # =&gt; for Ruby dependencies (Eg. Jekyll)
 npm install       # =&gt; for Node dependencies (Eg. Grunt)
-</code></pre></div>
+</code></pre> </div>
 <p>Next we’ll create a local server by running the Grunt task <code class="highlighter-rouge">grunt serve</code>. Any changes to the files (eg. SCSS, JS etc) will trigger a page refresh in the browser.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>grunt serve
-</code></pre></div>
+</code></pre> </div>
 <p>If successful, your favorite browser should launch with
     <a href="http://localhost:9000">http://localhost:9000</a>.</p>
 <div class="spacer m-b-2"></div>
@@ -94,10 +94,10 @@ npm install       # =&gt; for Node dependencies (Eg. Grunt)
 <p>The following task <code class="highlighter-rouge">grunt build</code> will compile everything into the final end-product. Files will concatenate and minify, assets will be compressed to produce a
     <strong>/dist</strong> folder, which can then be uploaded directly to a server.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>grunt build    # =&gt; to concat and minify etc
-</code></pre></div>
+</code></pre> </div>
 <p>To view the contents of the compiled build in the browser, you can run the following task. This will run <code class="highlighter-rouge">grunt build</code> followed by creating an ad-hoc local server with Python.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>grunt host    # =&gt; Now browse to http://localhost:8000
-</code></pre></div>
+</code></pre> </div>
 <p>If successful, your favorite browser should launch with
     <a href="http://localhost:8000">http://localhost:8000</a>. Please note the change from port 9000 to
     <strong>8000</strong>.</p>

@@ -1,5 +1,5 @@
 <h1 id="basic-usage">Basic Usage</h1>
-<hr />
+<hr>
 <div class="spacer m-b-2"></div>
 <h2 id="integrating-into-your-cms">Integrating into your CMS</h2>
 <p>Let’s assume the client has signed off on the design and the front-end implementation. All that’s left now, is to incorporate into your own CMS. In a typical scenario, the third party would be handing over a zipped directory of static files, it’s then the developer’s job to figure out how everything is structured before breaking it down into template files.</p>
@@ -51,13 +51,13 @@
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/css/some-css-file.css"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/css/some-css-file.css"</span><span class="nt">&gt;</span>
 <span class="c">&lt;!-- endbuild --&gt;</span>
-</code></pre> </div>
+</code></pre></div>
 <p>With this:</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>&lt;link rel="stylesheet" href="/assets/css/minified.css"&gt;
-</code></pre> </div>
+</code></pre></div>
 <p>The same applies to JavaScript. The end result will look like this:</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="/assets/scripts/minified.js"&gt;&lt;/script&gt; &lt;!-- Before closing body --&gt;
-</code></pre> </div>
+</code></pre></div>
 <h3 id="create-child-layouts">04. Create Child Layouts</h3>
 <p>Once your
     <strong>base.html</strong> is in place and pointing to your assets correctly, you can then move through the child layouts one by one - again, substituting Liquid template syntax for your own. At this stage, you should be able to view your website as it starts taking shape.</p>

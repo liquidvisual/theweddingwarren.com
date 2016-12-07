@@ -1,5 +1,5 @@
 <h1 id="compatibility">Compatibility</h1>
-<hr />
+<hr>
 <div class="panel">
     <strong>NOTE:</strong>
     <p>Cross browser testing has been performed in IE9 and IE10 in addition to all modern browsers.</p>
@@ -10,7 +10,7 @@
 <span class="c">&lt;!--[if lt IE 9]&gt;       &lt;html class="lt-ie9"&gt; &lt;![endif]--&gt;</span>
 <span class="c">&lt;!--[if IE 9]&gt;          &lt;html class="lt-ie10"&gt; &lt;![endif]--&gt;</span>
 <span class="c">&lt;!--[if gt IE 9]&gt;&lt;!--&gt;</span>  <span class="nt">&lt;html&gt;</span> <span class="c">&lt;!--&lt;![endif]--&gt;</span>
-</code></pre> </div>
+</code></pre></div>
 <p>This allows us to target “versions” of IE in CSS and JS by using a
     <strong>.lt-ie[x]</strong> class selector.</p>
 <h3 id="polyfills">Polyfills</h3>
@@ -19,7 +19,7 @@
     <strong>/layouts</strong> folder. The order of these items in that Master layout is extremely important. Let’s run through them.</p>
 <div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!-- Priority Scripts --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre> </div>
+</code></pre></div>
 <p>
     <a href="http://modernizr.com">Modernizr</a> is loaded in the head via CDN (right below JQuery). Modernizr is a JavaScript library that detects HTML5 and CSS3 features. IE8 will NOT recognise HTML5 elements such as <code class="highlighter-rouge">&lt;article&gt;</code> or <code class="highlighter-rouge">&lt;header&gt;</code> by default. Fortunately Modernizr patches this for us.</p>
 <h2 id="cdns">CDNs</h2>

@@ -1,0 +1,102 @@
+<!-- IF SUCCESS -->
+<div id="form-rsvp-success" class="py-1 text-xs-center alert alert-success mb-2" hidden>
+    <h4>Success!</h4>
+    <p>Your RSVP has been received. Thanks for that!</p>
+</div>
+
+<!-- IF ERROR -->
+<div id="form-rsvp-error" class="text-xs-center alert alert-danger alert-dismissible fade in mb-2" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4>Oops!</h4>
+    <p>Something went wrong. Please check your details.</p>
+</div>
+
+<form id="form-rsvp" class="form-rsvp form-quote-outlined" data-toggle="validator">
+
+    <div class="form-rsvp-entry">
+        <h3 class="text-xs-center">Guest {i}</h2>
+        <fieldset>
+
+            <!-- FULL NAME -->
+            <div class="form-group">
+                <label for="name-{i}">Full Name*</label>
+                <input class="form-control dude" id="name-{i}" name="name-{i}" type="text" placeholder="" required>
+                <small class="error">Your name is required.</small>
+            </div>
+
+            <!-- ATTENDING (Y/N) -->
+            <div data-form-group-attending class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-control-label">Will you be attending?*</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="custom-control custom-radio m-r-1">
+                            <input class="custom-control-input" name="attending-{i}" type="radio" value="Yes" required>
+                            <span class="custom-control-indicator"><i class="fa fa-smile-o"></i></span>
+                            <span class="custom-control-description">Yep</span>
+                        </label>
+                        <label class="custom-control custom-radio m-r-1">
+                            <input class="custom-control-input" name="attending-{i}" type="radio" value="No" required>
+                            <span class="custom-control-indicator no"><i class="fa fa-frown-o"></i></span>
+                            <span class="custom-control-description">Nope</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXCUSE -->
+            <div data-form-group-excuse class="form-group hidden">
+                <div class="row">
+                    <div class="col-md-5">
+                        <label for="excuse-{i}" class="form-control-label">Please select your excuse</label>
+                    </div>
+                    <div class="col-md-7">
+                        <select style="width: 100%;" class="custom-select" name="excuse-{i}">
+                            <option selected value="" disabled>Please select one</option>
+                            <option value="Snowed in">Snowed in, phones are down</option>
+                            <option value="Out of country">I'm pretending I'm out of the country</option>
+                            <option value="Agoraphobia">I have chronic agoraphobia</option>
+                            <option value="Washing hair">I'm washing my hair that day</option>
+                            <option value="Netflix">I'm marathoning Netflix</option>
+                            <option value="Sick">I'm sick *cough*</option>
+                            <option value="Hologram">I'm just a hologram</option>
+                            <option value="No limbs">I have no arms or legs</option>
+                            <option value="Elaborate excuse">Elaborate excuse</option>
+                            <option value="Generic excuse">Generic excuse</option>
+                            <option value="Coming, being difficult">I'm coming, I'm just being difficult</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            </fieldset>
+            <fieldset data-fieldset-additional class="hidden">
+
+            <!-- DIETARY REQUIREMENTS -->
+            <div class="form-group">
+                <label for="dietary-requirements-{i}">Dietary Requirements</label>
+                <textarea class="form-control" id="dietary-requirements-{i}" name="dietary-requirements-{i}" rows="2" placeholder="Eg. Allergic to nuts, vegetarian etc"></textarea>
+                <small class="error">A message is required.</small>
+            </div>
+
+            <!-- SONG -->
+            <div class="form-group">
+                <label for="song-{i}">I will get up and dance if I hear...</label>
+                <textarea class="form-control" id="song-{i}" name="song-{i}" rows="2" placeholder="Eg. Michael Jackson"></textarea>
+                <small class="error">A song is required.</small>
+            </div>
+
+        </fieldset>
+
+        <button type="button" data-remove-guest class="btn btn-primary btn-danger"><i class="fa fa-close"></i>&nbsp; Remove</button>
+        <button type="button" data-add-guest class="btn btn-primary float-xs-right"><i class="fa fa-plus"></i>&nbsp; Add Guest</button>
+
+    </div> <!-- /.form-rsvp-entry -->
+
+    <!-- SUBMIT -->
+    <button type="submit" class="btn btn-primary btn-block btn-lg"><i class="fa fa-envelope"></i>&nbsp; Finish and send</button>
+
+</form>

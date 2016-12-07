@@ -1,0 +1,195 @@
+---
+layout: base
+---
+
+{% assign settings = site.data.settings %}
+
+{% include hero.html %}
+
+<!-- THE COUPLE -->
+<section class="section section-couple" hiddenX>
+	<div class="container text-xs-center" style="max-width: 900px;">
+		<h2 class="mb-1">The Couple</h2>
+		<p>They've been happy together since<br>
+		<date>17 July 2006</date></p>
+
+		<div class="heart">
+			<img class="img" src="/assets/img/layout/heart.png">
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+
+				<!-- AVATAR -->
+				<div class="avatar">
+					<img width="180" src="/assets/img/layout/instagram-placeholder.png">
+					<span class="img" style="background-image: url(/assets/img/content/anne.jpg)"></span>
+				</div>
+
+				<h3>The Bride</h3>
+				<h4 class="font-family-serif">Anne Uy</h4>
+				<p>Born 20.05.88<br>
+				Cairns, QLD</p>
+				<div class="spacer mb-1"></div>
+			</div>
+
+			<div class="col-md-6">
+
+				<!-- AVATAR -->
+				<div class="avatar">
+					<img width="180" src="/assets/img/layout/instagram-placeholder.png">
+					<span class="img" style="background-image: url(/assets/img/content/mitch.jpg)"></span>
+				</div>
+
+				<h3>The Groom</h3>
+				<h4 class="font-family-serif">Mitchell Warren</h4>
+				<p>Born 20.10.86<br>
+				Sydney, NSW</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="section section-countdown hidden-sm-down" hiddenX>
+	<div class="container text-xs-center">
+		<header class="mb-3">
+			<h2>The Big Day</h2>
+		</header>
+		<div id="countdown" class="countdown"></div>
+	</div>
+</section>
+
+<!-- EVENT DETAILS -->
+<section id="event-details" class="section section-event-details pb-0" hiddenX>
+	<div class="container text-xs-center">
+		<header class="header text-xs-center">
+			<h2>Event Details</h2>
+		</header>
+		<div class="row table-row">
+			<div class="col-md-6">
+				<h3 class="mb-2">Ceremony &amp; Reception</h3>
+
+				<!-- DATE/TIME -->
+				<div style="display: inline-block;" class="text-xs-left">
+					<p><date><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;&nbsp; Friday 17 March 2017</date></p>
+					<p><time><i class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp; 6.00PM - 12.00PM Midnight</time></p>
+				</div>
+
+				<div class="spacer mb-2"></div>
+
+				<p>
+					<address>
+						<i class="fa fa-map-marker"></i> {{ settings.offices[0].title }}
+						<br>
+						{{ settings.offices[0].address }}
+					</address>
+				</p>
+
+				<h4>Paid Parking</h4>
+				<p>Council parking station on Central Avenue
+				<br>
+				Parking available through Novotel Hotel via Raglan St</p>
+				<br>
+				<h4>Attire</h4>
+				<p class="mb-0">Cocktail / Semi Formal</p>
+
+			</div>
+			<div class="col-md-6">
+				{% include google_map.html %}
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ACCOMMODATION -->
+<section id="accommodation" class="section section-accommodation pb-0" hiddenX>
+	<div class="container">
+
+		<header class="header text-xs-center">
+			<h2>Accommodation</h2>
+		</header>
+
+		<div class="row table-row">
+			<div class="col-md-6 hidden-sm-down">
+
+			</div>
+			<div class="col-md-6">
+				<p>Most of our guests will be staying at<br>
+				the nearby:</p>
+				<p>
+					<address>
+						<i class="fa fa-map-marker"></i>
+						<a href="http://www.novotelmanlypacific.com.au">{{ settings.offices[1].title }} <i class="fa fa-external-link"></i></a>
+						<br>
+						{{ settings.offices[1].address }}<br>
+						<a href="tel:{{ settings.offices[1].phone }}">{{ settings.offices[1].phone }}</a>
+					</address>
+				</p>
+
+				<p>As our wedding will be held at Beachside Dojo<br>
+				our guests are being offered 10% off their stay.</p>
+				<p>You will need to make your booking over the phone.<br>
+				Quote the discount code: <strong>225 992</strong>.</p>
+
+			</div>
+		</div>
+	</div>
+	<img class="hidden-md-up" width="100%" src="/assets/img/content/novotel-exterior.jpg" alt="Novotel Hotel Exterior">
+</section>
+
+<!-- WISHING WELL -->
+<section id="wishing-well" class="section section-wishing-well section-overlay" hiddenX>
+	<div class="container text-xs-center">
+
+		<header class="mb-3">
+			<h2>Wishing Well</h2>
+		</header>
+
+		<p>You may be thinking of a present to bring<br>
+		but just your presence will mean everything.<br>
+		In each other we have all that we require<br>
+		but if you insist,<br>
+		there is something to which we aspire<br>
+		with special travel plans to follow our day<br>
+		a small gift of currency would help us on our way.
+		</p>
+
+		<img width="60" src="/assets/img/layout/jar@2x.png" alt="Wishing Well Jar">
+
+	</div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp-now" class="section section-rsvp section-overlay" hiddenX>
+	<div class="container text-xs-center">
+		<h2 class="mb-1">RSVP NOW</h2>
+		<p class="lead">Please take a moment to confirm your attendance.<br><strong><i>No mailing necessary!</i></strong></p>
+
+		<div class="caution-box" hidden>
+			<i class="fa fa-exclamation-triangle"></i>
+			<p class="text-xs-center text-danger">If you do not respond by <strong>February 12</strong><br>Please bring a chair and a sandwich</strong></p>
+		</div>
+
+		<div class="spacer mb-2"></div>
+		<div class="text-xs-left" style="max-width: 600px; margin: 0 auto;">
+			{% include form_rsvp.html %}
+		</div>
+	</div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram" class="section section-instagram" hiddenX>
+	<div class="container text-xs-center">
+
+		<header class="mb-3">
+			<h2><i class="fa fa-instagram"></i>&nbsp; Instagram</h2>
+		</header>
+
+
+		<ul id="instafeed" class="instafeed block-grid-xs-3 block-grid-md-5 block-grid-condensed"></ul>
+		<div class="spacer mb-3"></div>
+		<div class="h2 text-muted mb-2">#THEWEDDINGWARREN</div>
+		<p class="mb-0 text-xs-center"><img width="300" src="/assets/img/layout/leaves-bottom.png" alt="Leaves"></p>
+	</div>
+</section>

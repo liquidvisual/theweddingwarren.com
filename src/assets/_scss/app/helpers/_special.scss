@@ -1,0 +1,105 @@
+/*
+    SPECIAL.CSS
+
+    - Last updated: 00.00.00
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// SPECIAL
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================
+
+.caution-box {
+	display: inline-block;
+	display: table;
+	margin: 0 auto;
+
+	i {
+		display: table-cell;
+		vertical-align: middle;
+		color: $brand-danger;
+		padding-right: rem-calc(10);
+	}
+
+	p {
+		display: table-cell;
+	}
+}
+
+//-----------------------------------------------------------------
+// HERO TITLE CAPTION
+//-----------------------------------------------------------------
+
+.lv-hero-item-caption {
+
+	h1 {
+		line-height: 0.9;
+        // color: #222;
+        color: white;
+	}
+
+    .mitch,
+    .ampersand,
+    .anne {
+        font-family: $font-family-serif;
+        text-transform: none;
+        font-size: rem-calc(120);
+        // line-height: 40px;
+    }
+
+    .mitch,
+    .anne,
+    .desc {
+    	display: block;
+    }
+
+    .desc {
+        font-size: rem-calc(25);
+        font-weight: normal;
+        line-height: 2;
+        color: darken($brand-primary, 40%);
+        // margin-bottom: rem-calc(10);
+    }
+
+    date {
+        position: relative;
+        display: block;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-transform: uppercase;
+
+        &:before,
+        &:after, {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            width: 20%;
+            height: 1px;
+            background: rgba(black, 0.3);
+        }
+
+        &:after {
+            left: auto;
+            right: rem-calc(5);
+            width: 20%;
+        }
+    }
+
+    .ampersand {
+        position: relative;
+        top: -20px;
+        left: 10px;
+        font-size: rem-calc(100);
+        font-weight: 100;
+    }
+
+    @include media-breakpoint-up(md) {
+        width: auto;
+    }
+}

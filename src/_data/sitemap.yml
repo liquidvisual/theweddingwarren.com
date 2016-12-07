@@ -1,0 +1,21 @@
+- title: Home
+  url: /
+
+- title: Event Details
+  url: "#event-details"
+
+- title: Accommodation
+  url: "#accommodation"
+
+#- title: Bridal Party
+#  url: "#bridal-party"
+
+- title: Wishing Well
+  url: "#wishing-well"
+
+- title: Instagram
+  url: "#instagram"
+
+- title: RSVP Now
+  url: "#rsvp-now"
+  featured: true

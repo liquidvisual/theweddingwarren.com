@@ -1,0 +1,134 @@
+/*
+    TOPBAR.CSS
+
+    - Last updated: 06.10.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$container-gutter              : 30px !default;
+$primary-color                 : $brand-primary;
+$secondary-color               : #eee !default;
+$top-parent-anchor-bg-color    : $primary-color;
+$global-radius                 : 0;
+$lv-nav-padding                : 15px;
+$lv-nav-height                 : 44px;
+$dropdowns-have-anchor-borders : true;
+
+//-----------------------------------------------------------------
+// NAVIGATION
+//
+// If nav BG color is desired. Make nav absolute, and topbar relative
+//-----------------------------------------------------------------
+
+.global-navigation {
+    position: absolute; // [LOCKED]
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+
+    > .container {
+        position: relative;
+    }
+}
+
+//-----------------------------------------------------------------
+// TOPBAR
+//-----------------------------------------------------------------
+
+.topbar {
+    position: absolute; // [LOCKED]
+    top: 8px;
+    right: $container-gutter / 2;
+    width: 100%; // [LOCKED]
+}
+
+//-----------------------------------------------------------------
+// GENERAL UL
+//-----------------------------------------------------------------
+
+.topbar ul {
+    padding: 0; // reset
+    margin: 0; // reset
+    list-style: none; // reset
+    font-family: $font-family-sans-serif;
+    font-size: rem-calc(14);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+//=========================================
+// TOP PARENT UL
+//=========================================
+
+.topbar > ul {
+    display: table;
+    float: right;
+
+    > li {
+        position: relative; // [LOCKED]
+        float: left; // prevents hairline weirdness
+        margin: 0; // reset
+    }
+
+    > li.featured {
+        background: $brand-quaternary;
+        border-radius: 3px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+}
+
+//-----------------------------------------------------------------
+// ALL ANCHORS (INCL. DROPDOWN CHILDREN)
+//-----------------------------------------------------------------
+
+.topbar a {
+    display: block; // locked
+    padding: rem-calc(10 15);
+    color: white;
+}
+
+//-----------------------------------------------------------------
+// TOP PARENT ANCHORS (VISIBLE)
+//-----------------------------------------------------------------
+
+.topbar .top-parent-anchor {
+    display: block; // locked
+    padding: rem-calc(0 $lv-nav-padding);
+    line-height: rem-calc($lv-nav-height);
+    // background: $top-parent-anchor-bg-color;
+    color: white; //$gray-light;
+    cursor: pointer;
+    border-radius: 3px;
+
+    &:hover {
+        background: rgba(black, 0.3); //lighten($top-parent-anchor-bg-color, 10%);
+        color: white;
+    }
+
+    // Optional
+    &:hover > .text {
+        border-bottom: none !important;
+    }
+}
+
+.topbar .featured .top-parent-anchor:hover {
+    background: lighten($brand-quaternary, 5%);
+}
+
+//=========================================
+// ACTIVE TOP PARENT ANCHOR
+//=========================================
+
+.topbar .active .top-parent-anchor .text {
+    color: white;
+    border-bottom: 3px solid #e53c53; //$brand-primary;
+    padding-bottom: 3px;
+}
+
+//=========================================
+//
+//=========================================

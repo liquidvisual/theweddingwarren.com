@@ -1,0 +1,31 @@
+/*
+    FONTS.CSS
+
+    - Last updated: 29.11.16
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$font-path: "/assets/fonts" !default;
+
+//=========================================
+// NORTHERN LIGHTS
+//=========================================
+
+// Light
+@font-face {
+    font-family: 'Northern Lights';
+    font-style: normal;
+    font-weight: 300;
+    src: url('#{$font-path}/NorthernLights-Script.eot');
+    src: local('☺'),
+        url('#{$font-path}/NorthernLights-Script.woff') format('woff'),
+        url('#{$font-path}/NorthernLights-Script.tff') format('truetype'),
+        url('#{$font-path}/NorthernLights-Script.svg') format('svg');
+}
+
+//=========================================
+//
+//=========================================

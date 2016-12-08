@@ -297,15 +297,6 @@
                         <h4>Success!</h4>
                         <p>Your RSVP has been received. Thanks for that!</p>
                     </div>
-
-                    <!-- IF ERROR -->
-                    <div id="form-rsvp-error" class="text-xs-center alert alert-danger alert-dismissible fade in mb-2" role="alert" hidden>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4>Oops!</h4>
-                        <p>Something went wrong. Please check your details.</p>
-                    </div>
                     <form id="form-rsvp" class="form-rsvp form-quote-outlined" data-toggle="validator">
                         <div class="form-rsvp-entry">
                             <h3 class="text-xs-center">Guest {i}</h3>
@@ -397,6 +388,15 @@
                             <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
                         </button>
                     </form>
+
+                    <!-- IF ERROR -->
+                    <div id="form-rsvp-error" class="text-xs-center alert alert-danger alert-dismissible fade in mb-2" role="alert" hidden>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4>Oops!</h4>
+                        <p>Something went wrong. Please check your details.</p>
+                    </div>
                 </div>
             </div>
         </section>

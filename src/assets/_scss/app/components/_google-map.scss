@@ -16,9 +16,23 @@
 	top: 0;
 	left: 0;
 	bottom: 0;
+	right: 0;
 	width: 100%;
 	height: 100%;
 	background: #a3cdff;
+
+	iframe {
+		position: relative;
+		z-index: 1;
+		// display: none;
+	}
+
+	.fa-spinner {
+		position: absolute;
+		top: calc(50% - #{rem-calc(40)}/2);
+		left: calc(50% - #{rem-calc(50)}/2);
+		color: white;
+	}
 }
 
 //-----------------------------------------------------------------

@@ -42,7 +42,7 @@ $dropdowns-have-anchor-borders : true;
     position: absolute; // [LOCKED]
     top: 8px;
     right: $container-gutter / 2;
-    width: 100%; // [LOCKED]
+    // width: 100%; // [LOCKED for full]
 }
 
 //-----------------------------------------------------------------

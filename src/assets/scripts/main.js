@@ -5,23 +5,24 @@
 //
 //-----------------------------------------------------------------
 
-$(function() {
+//-----------------------------------------------------------------
+// WINDOW LOAD
+//-----------------------------------------------------------------
 
-    //-----------------------------------------------------------------
-    // WINDOW LOAD
-    //-----------------------------------------------------------------
+$(window).on('load', function() {
+    $('html').addClass('has-loaded');
+    $('input, textarea').placeholder(); // IE9 Patch
 
-    $(window).on('load', function() {
-        $('html').addClass('has-loaded');
-        $('input, textarea').placeholder(); // IE9 Patch
-
-        // GOOGLE MAP
-        $('[data-google-map]').each(function(){
-            var $this = $(this);
-            var dataSrc = $(this).attr('data-src');
-            $this.attr('src', dataSrc);
-        });
+    // GOOGLE MAP
+    $('iframe').each(function(){
+        var $this = $(this);
+        var dataSrc = $(this).attr('data-src');
+        $this.attr('src', dataSrc);
+        console.log(dataSrc);
     });
+});
+
+$(function() {
 
     //-----------------------------------------------------------------
     // COUNTDOWN

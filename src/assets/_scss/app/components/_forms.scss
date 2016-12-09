@@ -1,7 +1,7 @@
 /*
     FORMS.CSS
 
-    - Last updated: 06.10.16
+    - Last updated: 08.12.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -43,12 +43,11 @@ form[data-toggle="validator"] .has-error > .error {
 }
 
 //-----------------------------------------------------------------
-// FORM RSVP ERROR
+// FORM RSVP FEEDBACK
 //-----------------------------------------------------------------
 
 .section-rsvp .alert-success,
 .section-rsvp .alert-danger {
-
 	p {
 		color:  #222;
 		font-weight: 500;
@@ -56,25 +55,24 @@ form[data-toggle="validator"] .has-error > .error {
 	}
 }
 
-
 //-----------------------------------------------------------------
 // FORM RSVP
 //-----------------------------------------------------------------
 
 .form-rsvp {
 
-	h3 {
-		margin-bottom: $spacer;
-	}
-
 	.form-rsvp-entry {
-		background: white;
 		padding: $spacer*2 $spacer;
 		margin-bottom: $spacer;
 		box-shadow: 0px 2px 5px rgba(black, 0.05);
+		background: white;
 
 		@include media-breakpoint-up(md) {
 		    padding: $spacer*2;
+		}
+
+		h3 {
+			margin-bottom: $spacer;
 		}
 	}
 
@@ -83,13 +81,15 @@ form[data-toggle="validator"] .has-error > .error {
 		transition: margin ease-out 500ms;
 	}
 
-	// HIDDEN
+	//=========================================
+	// HIDDEN FOR ANIMATION
+	//=========================================
+
 	fieldset,
 	.form-group {
 		max-height: 100vh;
 
 		&.hidden {
-			// display: none;
 			max-height: 0;
 			margin: 0;
 			overflow: hidden;
@@ -98,7 +98,7 @@ form[data-toggle="validator"] .has-error > .error {
 }
 
 //-----------------------------------------------------------------
-// CUSTOM RADIO
+// CUSTOM RADIO - YEP/NOPE
 //-----------------------------------------------------------------
 
 .form-rsvp .custom-control-indicator {
@@ -125,7 +125,10 @@ form[data-toggle="validator"] .has-error > .error {
 	}
 }
 
-// active
+//=========================================
+// ACTIVE STATE
+//=========================================
+
 .custom-radio .custom-control-input:checked ~ .custom-control-indicator {
 	background: $brand-success;
 	transform: scale(1.2);
@@ -153,20 +156,58 @@ form[data-toggle="validator"] .has-error > .error {
 	text-align: center;
 }
 
+//-----------------------------------------------------------------
+// SUBMIT
+//-----------------------------------------------------------------
+
 .form-rsvp .btn[type=submit] {
-	background: saturate(darken(#b1cdb8, 15%), 10%);
+	position: relative;
+	background: #77b988;
 	border: 0;
 	cursor: pointer;
-	display: block;
+	transition: background ease 300ms;
+
+	&.is-sending {
+		color: rgba(white, 0);
+		background: rgba(#77b988, 0.3);
+		cursor: default;
+		opacity: 1;
+
+		.fa-spinner {
+			display: block;
+		}
+
+		&:hover,
+		&:active {
+			background: rgba(#77b988, 0.3);
+		}
+	}
+
+	.fa-spinner {
+		display: none;
+		position: absolute;
+		top: calc(50% - 15px);
+		left: calc(50%);
+		font-size: rem-calc(30);
+		color: white;
+	}
+
+
+
+	&:active,
+	&:hover {
+		background: darken(#77b988, 8%);
+	}
+}
+
+//-----------------------------------------------------------------
+// FIELDSET
+//-----------------------------------------------------------------
+
+.fieldset-guest {
+	margin-bottom: $spacer;
 }
 
 //=========================================
 //
 //=========================================
-
-.fieldset-guest {
-	// border: 1px solid rgba(#3e7fac, 0.8);
-	// padding: $spacer;
-	margin-bottom: $spacer;
-	// background: rgba(#ece1bc, 0.3);
-}

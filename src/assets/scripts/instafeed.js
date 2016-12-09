@@ -14,9 +14,9 @@ $(function() {
     // WINDOW LOAD
     //-----------------------------------------------------------------
 
-    $(window).on('load', function() {
-        feed.run();
-    });
+    // $(window).on('load', function() {
+        // feed.run();
+    // });
 
     //-----------------------------------------------------------------
     // USER FEED WITH TAG FILTER
@@ -47,6 +47,8 @@ $(function() {
         resolution: 'standard_resolution',
         template: '<li><a class="{{orientation}}" href="{{link}}" target="_blank"><span class="img" style="background-image: url({{image}})"></span><img width="100%" src="/assets/img/layout/instagram-placeholder.png"></a></li>'
     });
+
+    feed.run();
 
     //-----------------------------------------------------------------
     //

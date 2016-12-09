@@ -143,8 +143,8 @@
             var name       =  $('[id*=name]', $(this)).val();
             var attending  =  $('[data-form-group-attending] input[type=radio]:checked').val();
             var excuse     =  $('[data-form-group-excuse] select').val();
-            var dietary     = $('[id*=dietary-requirements]', $(this)).val();
-            var song       = $('[id*=song]', $(this)).val();
+            var dietary    =  $('[id*=dietary-requirements]', $(this)).val();
+            var song       =  $('[id*=song]', $(this)).val();
 
             var item = {}
             	item.id = index;
@@ -163,20 +163,26 @@
     // STEP 03. SEND FORM(S)
     //-----------------------------------------------------------------
 
-    $formRSVP.validator().on("submit", function(event){
+    $formRSVP.on('submit', function(event){
+        var $form = $(this);
+        var $submitBtn = $('button[type=submit]');
 
-    	if (event.isDefaultPrevented()) {
-    		console.log('Error');
-    		return;
-    	}
+        event.preventDefault();
 
-    	var $form = $(this);
-    	event.stopPropagation();
-    	event.preventDefault();
+        if ($submitBtn.hasClass('disabled')) {
+            console.log('Error');
+            return;
+        }
 
-    	createJSON();
-    	// console.log($form.serializeArray());
-    	// $('button[type=submit]').addClass('disabled');
+        // event.stopPropagation();
+
+        createJSON();
+
+        console.log('disabling btn');
+
+        $submitBtn.addClass('is-sending').attr('disabled', true);
+
+        // console.log($form.serializeArray());
 
         $.ajax({
                 type: 'POST',
@@ -184,19 +190,13 @@
                 data: {myData:jsonObj},
                 cache: false,
                 success: function(feedback){
-                	console.log(feedback);
-                    $formRSVP.hide();
-
+                    $formRSVP[0].reset();
+                    $formRSVP.fadeOut();
                     $('#form-rsvp-success').removeAttr('hidden').addClass('animated bounceIn');
-
                     scrollTo('#rsvp-now');
-
+                    // console.log(feedback);
                     // alert(form.serialize());
-                    // $('form input, form textarea').prop('disabled', true); // disable the form
-                    // $('input[type=radio], input[type=checkbox]').removeClass("checked"); // wipe the ticks
-                    // $form[0].reset(); // wipe the form data
-                    // $('.contact-form-default').addClass('hide');
-                    // $('.contact-form-feedback').removeClass('hide');
+
             } // success
         }); // ajax
     });

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/assets/css/minified.css">
 </head>
 <body data-environment="production">
-    <div class="lv-page">
+    <div id="home" class="lv-page">
 
         <!-- HEADER -->
         <header class="global-header fixed-top">
@@ -53,12 +53,12 @@
             </div>
 
             <!-- NAVIGATION -->
-            <nav class="global-navigation hidden-lg-down">
+            <nav class="global-navigation hidden-lg-down" data-scroll-highlight>
                 <div class="container">
                     <div class="topbar">
                         <ul>
                             <li class="">
-                                <a class="top-parent-anchor" href="/">
+                                <a class="top-parent-anchor" href="#home">
                                     <span class="text">Home</span>
                                 </a>
                             </li>
@@ -558,7 +558,7 @@
 <!-- OFF-CANVAS MENU --><nav class="lv-off-canvas" data-off-canvas-menu aria-hidden="true">
         <ul>
             <li class="">
-                <a class="top-parent-anchor" href="/">
+                <a class="top-parent-anchor" href="#home">
                     <span class="text">Home</span>
                 </a>
             </li>

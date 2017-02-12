@@ -30,14 +30,14 @@
 </head>
 <body data-environment="{{ site.environment }}">
 
-    <div class="lv-page">
+    <div id="home" class="lv-page">
 
         <!-- HEADER -->
         <header class="global-header fixed-top">
             {% include header.html %}
 
             <!-- NAVIGATION -->
-            <nav class="global-navigation hidden-lg-down">
+            <nav class="global-navigation hidden-lg-down" data-scroll-highlight>
                 <div class="container">
                     <div class="topbar">
                         {% include snippets/navigation.html %}
@@ -97,8 +97,11 @@
     <script src="/assets/webvisual/assets/scripts/liquidvisual/utilities.js"></script>
     <script src="/assets/webvisual/assets/scripts/liquidvisual/responsive-utility.js"></script>
     <script src="/assets/webvisual/assets/scripts/liquidvisual/key.js"></script>
+
     <script src="/assets/scripts/vendor/countdown.js"></script>
     <script src="/assets/scripts/vendor/headroom.js"></script>
+    <script src="/assets/scripts/vendor/scroll-highlight.js"></script>
+
     <script src="/assets/scripts/off-canvas.js"></script>
     <script src="/assets/scripts/form-rsvp.js"></script>
     <script src="/assets/scripts/instafeed.js"></script>

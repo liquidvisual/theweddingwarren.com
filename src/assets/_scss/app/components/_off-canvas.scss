@@ -61,7 +61,7 @@ $hamburger-slit-height: 4px;
 		list-style: none;
 		padding: 0 0 50px 0;
 		margin: 0;
-		font-size: rem-calc(16);
+		font-size: 15px; //rem-calc(16);
 		overflow: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -192,7 +192,7 @@ $hamburger-slit-height: 4px;
 		transform: translateX(-$menu-width-xs);
 
 		@include media-breakpoint-up(md) {
-		    position: fixed; // bc on tablets the header is not fixed, prevents edge case "jump"
+		    // position: fixed; // bc on tablets the header is not fixed, prevents edge case "jump"
 		    // right: 0; // keep for reference
 		    width: 100vw; // savior
 		    transform: translateX(-$menu-width-md);

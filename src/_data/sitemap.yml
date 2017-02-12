@@ -1,5 +1,5 @@
 - title: Home
-  url: /
+  url: "#home"
 
 - title: Event Details
   url: "#event-details"

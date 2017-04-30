@@ -1,0 +1,19 @@
+<!-- PAGE LOADER -->
+<div id="lv-page-loader" class="lv-page-loader">
+    <div class="lv-page-loader-spinner">
+        <div class="lv-spinner-dot-1"></div>
+        <div class="lv-spinner-dot-2"></div>
+    </div>
+</div>
+
+<!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
+<script>
+    var loader = document.getElementById('lv-page-loader');
+    loader.style.display = 'flex';
+
+    // Prevent loader from getting stuck if body takes too long
+    setTimeout(function(){
+        loader.className += ' force-finish';
+    }, 2100);
+
+</script>

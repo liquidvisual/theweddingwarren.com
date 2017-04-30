@@ -1,7 +1,7 @@
 /*
     LOADER.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 24.02.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,62 +12,81 @@
 //-----------------------------------------------------------------
 
 .lv-page-loader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: $brand-primary; //#333333;
-	z-index: 2147483647;
-	transition: opacity ease 1s, visibility ease 1s;
-
-	&.has-loaded {
-		opacity: 0;
-		visibility: hidden;
-	}
-}
-
-.lt-ie10 .lv-page-loader {
     display: none;
-}
-
-//-----------------------------------------------------------------
-// SPINNER
-//-----------------------------------------------------------------
-
-.lv-page-loader .display-table-cell {
-    text-align: center;
-    // padding-bottom: 200px;
-}
-
-//-----------------------------------------------------------------
-// SPINNER
-//-----------------------------------------------------------------
-
-.lv-spinner {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    position: relative;
-    margin: 100px auto;
-}
-
-.double-bounce1,
-.double-bounce2 {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: white;
-  opacity: 0.6;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background: $brand-primary;
+  z-index: 2147483647;
+    opacity: 1;
+
+    &.force-finish {
+        animation: page-loader-fadeout 1s ease 0s alternate 1 forwards;
+    }
+}
+
+html.has-loaded .lv-page-loader {
+    animation: page-loader-fadeout 1s ease 0.1s alternate 1 forwards;
+}
+
+//-----------------------------------------------------------------
+// DEV LOADER TURNED OFF FOR SPEED
+//-----------------------------------------------------------------
+
+html[data-dev-mode] .lv-page-loader {
+    visibility: hidden;
+}
+
+//-----------------------------------------------------------------
+// DISAPPEAR AFTER DELAY
+//-----------------------------------------------------------------
+
+@keyframes page-loader-fadeout {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+//-----------------------------------------------------------------
+// SPINNER
+//-----------------------------------------------------------------
+
+.lv-page-loader-spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    animation: sk-rotate 2.0s infinite linear;
+}
+
+//-----------------------------------------------------------------
+// SPINNER
+//-----------------------------------------------------------------
+
+.lv-spinner-dot-1,
+.lv-spinner-dot-2 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 60%;
+  height: 60%;
+  border-radius: 100%;
+  background-color: white; //#333;
   animation: sk-bounce 2.0s infinite ease-in-out;
 }
 
-.double-bounce2 {
+.lv-spinner-dot-2 {
+  top: auto;
+  bottom: 0;
   animation-delay: -1.0s;
 }
+
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
 
 @keyframes sk-bounce {
   0%, 100% {
@@ -78,29 +97,5 @@
 }
 
 //-----------------------------------------------------------------
-// SPINNER
+//
 //-----------------------------------------------------------------
-
-// .lv-spinner {
-//     width: 60px;
-//     height: 60px;
-//     background: white;
-//     display: inline-block;
-//     animation: sk-rotateplane 1.2s infinite ease-in-out;
-// }
-
-// @-webkit-keyframes sk-rotateplane {
-//   0% { -webkit-transform: perspective(120px) }
-//   50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-//   100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
-// }
-
-// @keyframes sk-rotateplane {
-//     0% {
-//         transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-//     } 50% {
-//         transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-//     } 100% {
-//         transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-//     }
-// }

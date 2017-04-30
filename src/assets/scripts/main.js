@@ -28,17 +28,17 @@ $(function() {
     // COUNTDOWN
     //-----------------------------------------------------------------
 
-    $('#countdown').countdown('2017/03/17 18:00:00', function(event) {
-      var $this = $(this).html(event.strftime(''
-        + '<ul class="block-grid-xs-5">'
-        // + '<li class="digit-box"><span class="digit">%m</span><span class="text">Months</span></li>'
-        + '<li class="digit-box"><span class="digit">%w</span><span class="text">Weeks</span></li>'
-        + '<li class="digit-box"><span class="digit">%d</span><span class="text">Days</span></li>'
-        + '<li class="digit-box"><span class="digit">%H</span><span class="text">Hours</span></li>'
-        + '<li class="digit-box"><span class="digit">%M</span><span class="text">Minutes</span></li>'
-        + '<li class="digit-box"><span class="digit">%S</span><span class="text">Seconds</span></li>'
-        + '</ul>'));
-    });
+    // $('#countdown').countdown('2017/03/17 18:00:00', function(event) {
+    //   var $this = $(this).html(event.strftime(''
+    //     + '<ul class="block-grid-xs-5">'
+    //     // + '<li class="digit-box"><span class="digit">%m</span><span class="text">Months</span></li>'
+    //     + '<li class="digit-box"><span class="digit">%w</span><span class="text">Weeks</span></li>'
+    //     + '<li class="digit-box"><span class="digit">%d</span><span class="text">Days</span></li>'
+    //     + '<li class="digit-box"><span class="digit">%H</span><span class="text">Hours</span></li>'
+    //     + '<li class="digit-box"><span class="digit">%M</span><span class="text">Minutes</span></li>'
+    //     + '<li class="digit-box"><span class="digit">%S</span><span class="text">Seconds</span></li>'
+    //     + '</ul>'));
+    // });
 
     //-----------------------------------------------------------------
     // LAUNCH MANAGE ON KEYPRESS

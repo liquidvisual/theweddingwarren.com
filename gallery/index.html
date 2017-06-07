@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <title>Gallery - The Wedding Warren</title>
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,700">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- FAV ICONS -->
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/minified.css">
+</head>
+<body class="theme-home">
+
+    <!-- PAGE LOADER -->
+    <div id="lv-page-loader" class="lv-page-loader">
+        <div class="lv-page-loader-spinner">
+            <div class="lv-spinner-dot-1"></div>
+            <div class="lv-spinner-dot-2"></div>
+        </div>
+    </div>
+
+    <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
+    <script>
+    var loader = document.getElementById('lv-page-loader');
+    loader.style.display = 'flex';
+    // Prevent loader from getting stuck if body takes too long
+    setTimeout(function() {
+        loader.className += ' force-finish';
+    }, 2100);
+    </script>
+    <div id="home" class="lv-page">
+
+        <!-- HEADER -->
+        <header class="global-header fixed-top">
+            <div class="container">
+
+                <!-- LOGO -->
+                <a class="logo" href="/" title="The Wedding Warren" itemprop="url">
+
+                    <!-- <img src="http://placehold.it/250x150" alt="" itemprop="logo"> -->
+                    <span class="text">
+                        <span class="brand-quaternary-color">#</span>TheWeddingWarren</span>
+                </a>
+
+                <!-- HAMBURGER -->
+                <div class="global-mobile-menu hidden-md-up">
+                    <div class="lv-hamburger" data-menu-toggle>
+                        <span class="lv-hamburger-top"></span>
+                        <span class="lv-hamburger-middle"></span>
+                        <span class="lv-hamburger-bottom"></span>
+                        <span class="lv-hamburger-hit"></span>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="global-navigation hidden-md-down" data-scroll-highlight>
+                    <div class="topbar">
+                        <ul>
+                            <li class="">
+                                <a class="top-parent-anchor" href="#home">
+                                    <span class="text">Home</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="#the-gallery">
+                                    <span class="text">Gallery</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="#photobooth">
+                                    <span class="text">Photobooth</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="#credits">
+                                    <span class="text">Credits</span>
+                                </a>
+                            </li>
+                            <li class="featured">
+                                <a class="top-parent-anchor" href="#submit-your-photos">
+                                    <span class="text">Submit Your Photos!</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="lv-hero-wrapper">
+
+            <!-- HERO -->
+            <div class="lv-hero">
+
+                <!-- HERO ITEM -->
+                <div class="lv-hero-item" style="background-image: url(/assets/img/content/hero/hero-1.jpg)">
+                    <div class="lv-hero-item-table">
+                        <div class="lv-hero-item-cell v-align-middle">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 offset-lg-3 text-xs-center">
+                                        <div class="lv-hero-item-caption animated fadeInLeft">
+                                            <h1>
+                                                <span class="mitch">Mitchell</span>
+                                                <span class="anne">
+                                                    <span class="ampersand">&amp;</span> Anne</span>
+                                                <span class="desc">Are Now Married</span>
+                                            </h1>
+                                            <date>17 March 2017</date>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.lv-hero -->
+            </div>
+
+        <!-- /.lv-hero-wrapper -->
+        <script>
+        // This object must be defined before the lazysizes script. A basic example:
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.js"></script>
+        <script src="https://cdn.jsdelivr.net/g/lazysizes(lazysizes.min.js)" async></script>
+
+        <!-- GALLERY -->
+        <section class="section section-gallery isotope-wrapper pt-0">
+            <div class="container">
+                <form class="isotope-toolbar">
+                    <label>
+                        <input type="radio" data-type="*" checked name="isotope-filter">
+                        <span class="text text-uppercase">All</span>
+                    </label>
+                    <label>
+                        <input type="radio" data-type="preparation" name="isotope-filter">
+                        <span class="text text-uppercase">Preparation</span>
+                    </label>
+                    <label>
+                        <input type="radio" data-type="ceremony" name="isotope-filter">
+                        <span class="text text-uppercase">Bride &amp; Groom</span>
+                    </label>
+                    <label>
+                        <input type="radio" data-type="dinner" name="isotope-filter">
+                        <span class="text text-uppercase">Ceremony</span>
+                    </label>
+                    <label>
+                        <input type="radio" data-type="dancing" name="isotope-filter">
+                        <span class="text text-uppercase">Reception</span>
+                    </label>
+                </form>
+
+                <!-- ISOTOPE BOX 333 -->
+                <ul class="isotope-box popup-gallery block-grid-xs-2 block-grid-md-3 block-grid-lg-4 block-grid-condensed">
+                    <li class="isotope-item" data-type="">
+                        <a title="Photo 1" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-1.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-1.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 2" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-2.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-2.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 3" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-3.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-3.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationceremony">
+                        <a title="Photo 4" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-4.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-4.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationceremonydancing">
+                        <a title="Photo 5" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-5.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-5.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationceremonydancing">
+                        <a title="Photo 6" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-6.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-6.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationceremonydancing">
+                        <a title="Photo 7" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-7.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-7.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationceremonydancing">
+                        <a title="Photo 8" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-8.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-8.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationceremonydancing">
+                        <a title="Photo 9" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-9.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-9.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdancing">
+                        <a title="Photo 10" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-10.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-10.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdancing">
+                        <a title="Photo 11" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-11.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-11.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdancing">
+                        <a title="Photo 12" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-12.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-12.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdancing">
+                        <a title="Photo 13" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-13.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-13.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdancing">
+                        <a title="Photo 14" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-14.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-14.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdancing">
+                        <a title="Photo 15" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-15.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-15.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdancing">
+                        <a title="Photo 16" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-16.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-16.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdancing">
+                        <a title="Photo 17" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-17.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-17.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 18" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-18.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-18.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 19" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-19.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-19.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 20" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-20.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-20.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 21" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-21.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-21.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 22" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-22.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-22.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 23" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-23.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-23.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 24" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-24.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-24.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 25" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-25.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-25.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 26" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-26.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-26.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 27" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-27.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-27.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 28" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-28.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-28.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 29" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-29.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-29.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 30" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-30.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-30.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 31" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-31.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-31.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 32" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-32.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-32.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 33" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-33.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-33.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 34" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-34.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-34.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 35" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-35.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-35.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 36" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-36.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-36.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 37" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-37.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-37.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 38" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-38.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-38.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 39" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-39.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-39.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 40" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-40.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-40.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdinner">
+                        <a title="Photo 41" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-41.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-41.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdinner">
+                        <a title="Photo 42" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-42.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-42.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdinner">
+                        <a title="Photo 43" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-43.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-43.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdinner">
+                        <a title="Photo 44" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-44.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-44.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdinner">
+                        <a title="Photo 45" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-45.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-45.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparationdinner">
+                        <a title="Photo 46" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-46.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-46.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 47" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-47.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-47.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 48" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-48.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-48.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 49" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-49.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-49.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 50" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-50.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-50.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 51" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-51.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-51.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 52" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-52.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-52.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 53" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-53.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-53.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 54" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-54.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-54.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 55" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-55.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-55.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 56" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-56.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-56.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 57" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-57.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-57.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 58" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-58.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-58.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 59" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-59.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-59.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 60" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-60.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-60.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 61" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-61.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-61.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 62" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-62.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-62.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 63" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-63.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-63.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 64" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-64.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-64.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 65" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-65.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-65.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 66" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-66.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-66.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 67" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-67.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-67.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 68" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-68.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-68.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 69" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-69.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-69.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 70" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-70.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-70.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 71" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-71.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-71.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 72" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-72.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-72.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 73" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-73.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-73.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 74" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-74.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-74.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 75" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-75.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-75.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 76" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-76.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-76.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 77" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-77.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-77.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 78" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-78.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-78.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 79" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-79.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-79.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 80" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-80.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-80.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 81" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-81.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-81.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 82" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-82.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-82.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 83" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-83.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-83.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 84" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-84.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-84.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 85" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-85.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-85.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 86" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-86.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-86.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 87" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-87.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-87.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 88" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-88.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-88.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 89" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-89.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-89.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 90" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-90.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-90.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 91" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-91.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-91.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 92" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-92.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-92.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 93" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-93.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-93.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 94" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-94.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-94.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 95" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-95.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-95.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 96" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-96.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-96.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 97" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-97.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-97.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 98" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-98.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-98.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 99" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-99.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-99.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                    <li class="isotope-item" data-type="preparation">
+                        <a title="Photo 100" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-100.jpg?width=800&quality=70">
+                            <img class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/gallery/photo-100.jpg?width=300&quality=60">
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-xs-center">
+                    <button class="btn btn-primary" data-gallery-expand>Load More
+                        <i class="fa fa-angle-down"></i>
+                    </button>
+                </p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="global-footer">
+
+            <!-- FOOTER BOTTOM -->
+            <section class="global-footer-bottom">
+                <div class="container">
+                    <small>&copy; 2017 |
+                        <a href="/before/">visit original site</a>
+                    </small>
+                    <small>
+                        <span class="float-xs-right">
+                            <img width="16" height="16" src="/assets/img/ui/liquidvisual-logo.svg" alt="Created by Mitch"> by
+                            <a class="author-logo" target="_blank" href="http://liquidvisual.com">liquidvisual</a>
+                        </span>
+                    </small>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <!-- /.lv-page -->
+    
+<!-- OFF-CANVAS MENU --><nav class="lv-off-canvas" data-off-canvas-menu aria-hidden="true">
+        <ul>
+            <li class="">
+                <a class="top-parent-anchor" href="#home">
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="#the-gallery">
+                    <span class="text">Gallery</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="#photobooth">
+                    <span class="text">Photobooth</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="#credits">
+                    <span class="text">Credits</span>
+                </a>
+            </li>
+            <li class="featured">
+                <a class="top-parent-anchor" href="#submit-your-photos">
+                    <span class="text">Submit Your Photos!</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--[if lte IE 9]>
+    <div class="lv-alert-bar">
+        <p>You're using an outdated browser. Please <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> to improve your experience.</p>
+        <span class="lv-alert-bar-close-btn">&times;</span>
+        <div class="lv-blackout"></div>
+    </div>
+    <![endif]-->
+
+    <!-- **** JAVASCRIPT **** -->
+    
+<!-- <script src="/_bower_components/jquery/dist/jquery.min.js"></script> --><script src="/assets/scripts/minified.js"></script>
+
+    <!-- NO JAVASCRIPT WARNING -->
+    <noscript>
+        <div class="lv-alert-bar">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+</body>
+</html>

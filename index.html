@@ -10,13 +10,14 @@
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,700">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- FAV ICONS -->
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="/assets/css/minified.css">
 </head>
-<body class="">
+<body class="theme-home">
 
     <!-- PAGE LOADER -->
     <div id="lv-page-loader" class="lv-page-loader">
@@ -36,37 +37,39 @@
     }, 2100);
     </script>
     <div id="home" class="lv-page">
+        <script>
+        // This object must be defined before the lazysizes script. A basic example:
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        //only for demo in production I would use normal expand option
+        // window.lazySizesConfig.expand = 300;
+        // window.lazySizesConfig.loadMode = 1;
+        </script>
+        <script src="https://cdn.jsdelivr.net/g/lazysizes(lazysizes.min.js)" async></script>
 
         <!-- HEADER -->
         <header class="global-header fixed-top">
             <div class="container">
-                <div class="display-table">
-                    <div class="display-cell">
 
-                        <!-- LOGO -->
-                        <a class="logo" href="/" title="The Wedding Warren" itemprop="url">
+                <!-- LOGO -->
+                <a class="logo" href="/" title="The Wedding Warren" itemprop="url">
 
-                            <!-- <img src="http://placehold.it/250x150" alt="" itemprop="logo"> -->
-                            <span class="text">
-                                <span class="brand-quaternary-color">#</span>TheWeddingWarren</span>
-                        </a>
+                    <!-- <img src="http://placehold.it/250x150" alt="" itemprop="logo"> -->
+                    <span class="text">
+                        <span class="brand-quaternary-color">#</span>TheWeddingWarren</span>
+                </a>
 
-                        <!-- HAMBURGER -->
-                        <div class="global-mobile-menu hidden-xl-up">
-                            <div class="lv-hamburger" data-menu-toggle>
-                                <span class="lv-hamburger-top"></span>
-                                <span class="lv-hamburger-middle"></span>
-                                <span class="lv-hamburger-bottom"></span>
-                                <span class="lv-hamburger-hit"></span>
-                            </div>
-                        </div>
+                <!-- HAMBURGER -->
+                <div class="global-mobile-menu hidden-md-up">
+                    <div class="lv-hamburger" data-menu-toggle>
+                        <span class="lv-hamburger-top"></span>
+                        <span class="lv-hamburger-middle"></span>
+                        <span class="lv-hamburger-bottom"></span>
+                        <span class="lv-hamburger-hit"></span>
                     </div>
                 </div>
-            </div>
 
-            <!-- NAVIGATION -->
-            <nav class="global-navigation hidden-lg-down" data-scroll-highlight>
-                <div class="container">
+                <!-- NAVIGATION -->
+                <nav class="global-navigation hidden-sm-down" data-scroll-highlight>
                     <div class="topbar">
                         <ul>
                             <li class="active">
@@ -75,34 +78,29 @@
                                 </a>
                             </li>
                             <li class="">
-                                <a class="top-parent-anchor" href="#event-details">
-                                    <span class="text">Event Details</span>
+                                <a class="top-parent-anchor" href="#the-gallery">
+                                    <span class="text">Gallery</span>
                                 </a>
                             </li>
                             <li class="">
-                                <a class="top-parent-anchor" href="#accommodation">
-                                    <span class="text">Accommodation</span>
+                                <a class="top-parent-anchor" href="#photobooth">
+                                    <span class="text">Photobooth</span>
                                 </a>
                             </li>
                             <li class="">
-                                <a class="top-parent-anchor" href="#wishing-well">
-                                    <span class="text">Wishing Well</span>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a class="top-parent-anchor" href="#instagram">
-                                    <span class="text">Instagram</span>
+                                <a class="top-parent-anchor" href="#credits">
+                                    <span class="text">Credits</span>
                                 </a>
                             </li>
                             <li class="featured">
-                                <a class="top-parent-anchor" href="#rsvp-now">
-                                    <span class="text">RSVP Now</span>
+                                <a class="top-parent-anchor" href="#submit-your-photos">
+                                    <span class="text">Submit Your Photos!</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
         <div class="lv-hero-wrapper">
 
@@ -110,7 +108,7 @@
             <div class="lv-hero">
 
                 <!-- HERO ITEM -->
-                <div class="lv-hero-item">
+                <div class="lv-hero-item" style="background-image: url(/assets/img/content/hero/hero-1.jpg)">
                     <div class="lv-hero-item-table">
                         <div class="lv-hero-item-cell v-align-middle">
                             <div class="container">
@@ -121,7 +119,7 @@
                                                 <span class="mitch">Mitchell</span>
                                                 <span class="anne">
                                                     <span class="ampersand">&amp;</span> Anne</span>
-                                                <span class="desc">Got Hitched</span>
+                                                <span class="desc">Are Now Married</span>
                                             </h1>
                                             <date>17 March 2017</date>
                                         </div>
@@ -138,43 +136,455 @@
 
         <!-- /.lv-hero-wrapper -->
         
-<!-- THE COUPLE --><section class="section section-couple" hiddenx>
-            <div class="container text-xs-center" style="max-width: 900px">
-                <h2 class="mb-1">The Couple</h2>
-                <p>They've been happy together since
-                    <br>
-                    <date>17 July 2006</date>
+<!-- THE GALLERY --><section id="the-gallery" class="section pt-2">
+            <div class="container text-xs-center">
+                <header class="mb-3">
+                    <h2>THE GALLERY</h2>
+                </header>
+                <a href="/gallery/">
+                    <img width="100%" src="/assets/img/layout/gallery-preview@2x.jpg" alt="Gallery Preview">
+                </a>
+                <p class="text-xs-center">
+                    <a href="/gallery/" class="btn btn-lg btn-primary">Visit Gallery
+                        <i class="fa fa-external-link"></i>
+                    </a>
                 </p>
-                <div class="heart">
-                    <img class="img" src="/assets/img/layout/heart.png">
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
+            </div>
+        </section>
 
-                        <!-- AVATAR -->
-                        <div class="avatar">
-                            <img width="180" src="/assets/img/layout/instagram-placeholder.png">
-                            <span class="img" style="background-image: url(/assets/img/content/anne.jpg)"></span>
-                        </div>
-                        <h3>The Bride</h3>
-                        <h4 class="font-family-serif">Anne Uy</h4>
-                        <p>Born 20.05.88
-                            <br>Cairns, QLD</p>
-                        <div class="spacer mb-1"></div>
-                    </div>
-                    <div class="col-md-6">
-
-                        <!-- AVATAR -->
-                        <div class="avatar">
-                            <img width="180" src="/assets/img/layout/instagram-placeholder.png">
-                            <span class="img" style="background-image: url(/assets/img/content/mitch.jpg)"></span>
-                        </div>
-                        <h3>The Groom</h3>
-                        <h4 class="font-family-serif">Mitchell Warren</h4>
-                        <p>Born 20.10.86
-                            <br>Sydney, NSW</p>
-                    </div>
+        <!-- PHOTOBOOTH -->
+        <section id="photobooth" class="section section-photobooth">
+            <div class="container text-xs-center">
+                <header class="mb-3">
+                    <h2>Photobooth</h2>
+                    <img style="width: 3.125rem; margin: -4px 0 0 10px" src="/assets/img/ui/swipe-right-white.svg">
+                </header>
+                <div class="popup-gallery list-photobooth">
+                    <a title="Photo 1" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-1.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-1.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 2" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-2.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-2.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 3" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-3.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-3.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 4" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-4.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-4.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 5" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-5.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-5.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 6" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-6.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-6.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 7" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-7.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-7.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 8" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-8.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-8.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 9" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-9.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-9.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 10" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-10.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-10.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 11" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-11.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-11.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 12" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-12.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-12.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 13" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-13.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-13.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 14" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-14.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-14.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 15" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-15.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-15.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 16" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-16.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-16.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 17" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-17.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-17.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 18" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-18.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-18.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 19" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-19.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-19.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 20" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-20.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-20.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 21" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-21.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-21.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 22" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-22.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-22.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 23" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-23.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-23.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 24" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-24.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-24.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 25" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-25.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-25.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 26" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-26.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-26.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 27" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-27.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-27.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 28" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-28.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-28.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 29" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-29.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-29.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 30" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-30.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-30.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 31" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-31.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-31.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 32" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-32.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-32.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 33" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-33.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-33.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 34" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-34.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-34.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 35" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-35.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-35.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 36" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-36.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-36.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 37" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-37.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-37.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 38" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-38.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-38.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 39" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-39.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-39.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 40" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-40.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-40.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 41" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-41.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-41.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 42" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-42.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-42.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 43" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-43.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-43.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 44" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-44.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-44.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 45" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-45.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-45.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 46" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-46.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-46.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 47" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-47.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-47.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 48" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-48.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-48.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 49" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-49.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-49.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 50" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-50.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-50.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 51" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-51.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-51.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 52" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-52.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-52.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 53" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-53.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-53.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 54" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-54.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-54.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 55" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-55.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-55.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 56" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-56.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-56.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 57" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-57.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-57.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 58" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-58.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-58.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 59" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-59.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-59.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 60" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-60.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-60.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 61" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-61.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-61.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 62" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-62.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-62.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 63" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-63.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-63.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 64" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-64.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-64.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 65" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-65.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-65.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 66" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-66.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-66.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 67" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-67.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-67.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 68" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-68.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-68.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 69" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-69.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-69.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 70" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-70.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-70.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 71" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-71.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-71.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 72" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-72.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-72.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 73" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-73.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-73.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 74" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-74.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-74.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 75" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-75.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-75.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 76" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-76.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-76.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 77" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-77.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-77.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 78" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-78.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-78.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 79" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-79.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-79.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 80" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-80.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-80.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 81" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-81.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-81.jpg?width=300&quality=70">
+                    </a>
+                    <a title="Photo 82" href="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-82.jpg?width=300&quality=70">
+                        <img width="150" class="lazyload" data-src="http://www.liquidvisual.net.rsz.io/theweddingwarren.com/photobooth/all/photobooth-82.jpg?width=300&quality=70">
+                    </a>
                 </div>
+            </div>
+        </section>
+        <script src="//rawgit.com/stevenschobert/instafeed.js/master/instafeed.min.js"></script>
+
+        <!-- INSTAGRAM -->
+        <section id="instagram" class="section section-instagram" hiddenx>
+            <div class="container text-xs-center">
+                <header class="mb-3" style="max-width: 900px; margin: auto">
+                    <h2 class="mb-2">
+                        <i class="fa fa-instagram"></i>&nbsp; Submit Your Photos</h2>
+                    <p>We'd love if you would share your own photos with us. If you have instagram, use the hashtag
+                        <strong>#theweddingwarren</strong> and they'll appear below. Alternatively, please email us!</p>
+                </header>
+                <ul id="instafeed" class="instafeed block-grid-xs-3 block-grid-md-5 block-grid-condensed"></ul>
+            </div>
+        </section>
+
+        <!-- CREDITS -->
+        <section id="credits" class="section section-credits">
+            <div class="container text-xs-center">
+                <header class="mb-3">
+                    <h2>Credits</h2>
+                </header>
+                <table class="table-credits text-xs-left mb-2">
+                    <thead hidden>
+                        <tr>
+                            <th>Item</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>PHOTOGRAPHY</th>
+                            <td>
+                                <a target="_blank" href="http://www.jasondeplater.com">Jason de Plater</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>CEREMONY &amp; RECEPTION VENUE</th>
+                            <td>
+                                <a target="_blank" href="http://www.beachsidedojo.com.au">Beachside Dojo, Manly</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>CELEBRANT</th>
+                            <td>
+                                <a target="_blank" href="http://marriedbylisa.com.au">Married by Lisa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>FLOWERS, ARCH &amp; BOUQUETS</th>
+                            <td>
+                                <a target="_blank" href="https://www.blesseddays.com.au">Blessed Days</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ACOUSTIC DUO</th>
+                            <td>
+                                <a target="_blank" href="http://www.tilleemusic.com.au">Tillee Music</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>DJ &amp; MC</th>
+                            <td>
+                                <a target="_blank" href="http://www.xydj.com.au">XYDJ</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PHOTOBOOTH</th>
+                            <td>
+                                <a target="_blank" href="http://www.photoboothme.com.au">Photobooth Me</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>WEDDING CAKE</th>
+                            <td>
+                                <a target="_blank" href="https://www.instagram.com/gracie_step10/">Grace Uy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>MAKE UP &amp; HAIR</th>
+                            <td>
+                                <a target="_blank" href="http://www.myaddictionmakeup.com.au">My Addiction Makeup</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>RINGS</th>
+                            <td>
+                                <a target="_blank" href="https://www.anguscoote.com.au">Angus &amp; Coote</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>RING BOXES</th>
+                            <td>
+                                <a target="_blank" href="https://www.etsy.com/au/shop/DownInTheBoondocks">Down in the Boondocks via Etsy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>BRIDAL GOWN</th>
+                            <td>
+                                <a target="_blank" href="https://www.jennifergobridal.com/">Jennifer Go Bridal Couture</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>FLOWER CROWN</th>
+                            <td>
+                                <a target="_blank" href="https://www.mintandmelon.com.au">Mint and Melon Boutique</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>BRIDAL SHOES</th>
+                            <td>
+                                <a target="_blank" href="http:www.betts.com.au">Betts Shoes</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>BRIDAL JEWELRY</th>
+                            <td>
+                                <a target="_blank" href="http://www.pandora.com">Pandora</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>BRIDESMAIDS JEWELRY</th>
+                            <td>
+                                <a target="_blank" href="http://www.lovisa.com.au">Lovisa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>BRIDESMAIDS DRESSES</th>
+                            <td>
+                                <a target="_blank" href="https://www.etsy.com/au/shop/RenzRags">Renz Bridal via Etsy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>BRIDAL ROBE</th>
+                            <td>
+                                <a target="_blank" href="http://www.glamourhanger.com.au">Glamour Hanger</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>BRIDESMAIDS ROBES</th>
+                            <td>
+                                <a target="_blank" href="https://www.facebook.com/GlamourAndGraceBridal/">Glamour and Grace Bridal</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>SUITS</th>
+                            <td>
+                                <a target="_blank" href="http:www.tarocash.com.au">Tarocash</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>TIES &amp; BOWTIES</th>
+                            <td>
+                                <a target="_blank" href="http://www.yd.com.au">YD.</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>FAVOURS</th>
+                            <td>
+                                <a target="_blank" href="http://shop.blackpantry.com.au/">Black Pantry Marshmallows</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>INVITATIONS &amp; STICKERS</th>
+                            <td>Designed by Anne &amp;
+                                <a target="_blank" href="http://www.moo.com.au">Printed by Moo</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ACCOMODATION</th>
+                            <td>
+                                <a target="_blank" href="http://www.novotelmanlypacific.com.au">Nototel Pacific Manly</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img width="60" src="/assets/img/layout/jar@2x.png" alt="Wishing Well Jar">
             </div>
         </section>
 
@@ -182,246 +592,9 @@
         <section class="section section-countdown">
             <div class="container text-xs-center">
                 <header class="mb-3">
-                    <h2>MARRIED FOR</h2>
+                    <h2>HAPPILY MARRIED FOR</h2>
                 </header>
                 <div class="countdown" data-countdown></div>
-            </div>
-        </section>
-
-        <!-- EVENT DETAILS -->
-        <section id="event-details" class="section section-event-details pb-0" hiddenx>
-            <div class="container text-xs-center">
-                <header class="header text-xs-center">
-                    <h2>Event Details</h2>
-                </header>
-                <div class="row table-row">
-                    <div class="col-md-6">
-                        <h3 class="mb-2">Ceremony &amp; Reception</h3>
-
-                        <!-- DATE/TIME -->
-                        <div style="display: inline-block" class="text-xs-left">
-                            <p>
-                                <date>
-                                    <i class="fa fa-calendar-o"></i>&nbsp;&nbsp;&nbsp; Friday 17 March 2017</date>
-                            </p>
-                            <p>
-                                <time>
-                                    <i class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp; 6.00PM - 12.00PM Midnight</time>
-                            </p>
-                        </div>
-                        <div class="spacer mb-2"></div>
-                        <p>
-                            <address>
-                                <i class="fa fa-map-marker"></i> Beachside Dojo
-                                <br>55 North Steyne
-                                <br>Manly NSW</address>
-                        </p>
-                        <h4>Paid Parking</h4>
-                        <p>Council parking station on Central Avenue
-                            <br>Parking available through Novotel Hotel via Raglan St</p>
-                        <br>
-                        <h4>Attire</h4>
-                        <p class="mb-0">Cocktail / Semi Formal</p>
-                    </div>
-                    <div class="col-md-6">
-
-                        <!-- GOOGLE MAP -->
-                        <div class="lv-google-map">
-                            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-                            <iframe data-google-map width="100%" height="100%" frameborder="0" style="pointer-events: none" data-src="https://maps.google.com/maps?hl=en&q=55 North SteyneManly NSW&z=21&ie=UTF8&t=roadmap&z=16&iwloc=A&output=embed"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ACCOMMODATION -->
-        <section id="accommodation" class="section section-accommodation pb-0" hiddenx>
-            <div class="container">
-                <header class="header text-xs-center">
-                    <h2>Accommodation</h2>
-                </header>
-                <div class="row table-row">
-                    <div class="col-md-6 hidden-sm-down"></div>
-                    <div class="col-md-6">
-                        <p>Most of our guests will be staying at
-                            <br>the nearby:</p>
-                        <p>
-                            <address>
-                                <i class="fa fa-map-marker"></i>
-                                <a href="http://www.novotelmanlypacific.com.au">Novotel Pacific Manly
-                                    <i class="fa fa-external-link"></i>
-                                </a>
-                                <br>55 North Steyne
-                                <br>Manly NSW
-                                <br>
-                                <a href="tel:(02) 9977 7666">(02) 9977 7666</a>
-                            </address>
-                        </p>
-                        <p>As our wedding will be held at Beachside Dojo
-                            <br>our guests are being offered 10% off their stay.</p>
-                        <p>You will need to make your booking over the phone.
-                            <br>Quote the discount code:
-                            <strong>225 992</strong>.</p>
-                    </div>
-                </div>
-            </div>
-            <img class="hidden-md-up" width="100%" src="/assets/img/content/novotel-exterior.jpg" alt="Novotel Hotel Exterior">
-        </section>
-
-        <!-- WISHING WELL -->
-        <section id="wishing-well" class="section section-wishing-well section-overlay" hiddenx>
-            <div class="container text-xs-center">
-                <header class="mb-3">
-                    <h2>Wishing Well</h2>
-                </header>
-                <p>You may be thinking of a present to bring
-                    <br>but just your presence will mean everything.
-                    <br>In each other we have all that we require
-                    <br>but if you insist,
-                    <br>there is something to which we aspire
-                    <br>with special travel plans to follow our day
-                    <br>a small gift of currency would help us on our way.</p>
-                <img width="60" src="/assets/img/layout/jar@2x.png" alt="Wishing Well Jar">
-            </div>
-        </section>
-
-        <!-- RSVP -->
-        <section id="rsvp-now" class="section section-rsvp section-overlay" hiddenx>
-            <div class="container text-xs-center">
-                <h2 class="mb-1">RSVP NOW</h2>
-                <p class="lead">Please take a moment to confirm your attendance.</p>
-                <div class="caution-box" hidden>
-                    <i class="fa fa-exclamation-triangle"></i>
-                    <p class="text-xs-center text-danger">If you do not respond by
-                        <strong>February 12</strong>
-                        <br>Please bring a chair and a sandwich</p>
-                </div>
-                <div class="spacer mb-2"></div>
-                <div class="text-xs-left" style="max-width: 600px; margin: 0 auto">
-
-                    <!-- IF SUCCESS -->
-                    <div id="form-rsvp-success" class="py-1 text-xs-center alert alert-success mb-2" hidden>
-                        <h4>Success!</h4>
-                        <p>Your RSVP has been received. Thanks for that!</p>
-                    </div>
-                    <form id="form-rsvp" class="form-rsvp form-quote-outlined" data-toggle="validator">
-                        <div class="form-rsvp-entry">
-                            <h3 class="text-xs-center">Guest {i}</h3>
-                            <fieldset>
-
-                                <!-- FULL NAME -->
-                                <div class="form-group">
-                                    <label for="name-{i}">Full Name*</label>
-                                    <input class="form-control dude" id="name-{i}" name="name-{i}" type="text" placeholder="" required>
-                                    <small class="error">Your name is required.</small>
-                                </div>
-
-                                <!-- ATTENDING (Y/N) -->
-                                <div data-form-group-attending class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label class="form-control-label">Will you be attending?*</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="custom-control custom-radio m-r-1">
-                                                <input class="custom-control-input" name="attending-{i}" type="radio" value="Yes" required>
-                                                <span class="custom-control-indicator">
-                                                    <i class="fa fa-smile-o"></i>
-                                                </span>
-                                                <span class="custom-control-description">Yep</span>
-                                            </label>
-                                            <label class="custom-control custom-radio m-r-1">
-                                                <input class="custom-control-input" name="attending-{i}" type="radio" value="No" required>
-                                                <span class="custom-control-indicator no">
-                                                    <i class="fa fa-frown-o"></i>
-                                                </span>
-                                                <span class="custom-control-description">Nope</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- EXCUSE -->
-                                <div data-form-group-excuse class="form-group hidden">
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <label for="excuse-{i}" class="form-control-label">Please select your excuse</label>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <select style="width: 100%" class="custom-select" name="excuse-{i}">
-                                                <option selected value="" disabled>Please select one</option>
-                                                <option value="Snowed in">Snowed in, phones are down</option>
-                                                <option value="Out of country">I'm pretending I'm out of the country</option>
-                                                <option value="Agoraphobia">I have chronic agoraphobia</option>
-                                                <option value="Washing hair">I'm washing my hair that day</option>
-                                                <option value="Netflix">I'm marathoning Netflix</option>
-                                                <option value="Sick">I'm sick *cough*</option>
-                                                <option value="Hologram">I'm just a hologram</option>
-                                                <option value="No limbs">I have no arms or legs</option>
-                                                <option value="Elaborate excuse">Elaborate excuse</option>
-                                                <option value="Generic excuse">Generic excuse</option>
-                                                <option value="Coming, being difficult">I'm coming, I'm just being difficult</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <fieldset data-fieldset-additional class="hidden">
-
-                                <!-- DIETARY REQUIREMENTS -->
-                                <div class="form-group">
-                                    <label for="dietary-requirements-{i}">Dietary Requirements</label>
-                                    <textarea class="form-control" id="dietary-requirements-{i}" name="dietary-requirements-{i}" rows="2" placeholder="Eg. Allergic to nuts, vegetarian etc"></textarea>
-                                    <small class="error">A message is required.</small>
-                                </div>
-
-                                <!-- SONG -->
-                                <div class="form-group">
-                                    <label for="song-{i}">I will get up and dance if I hear...</label>
-                                    <textarea class="form-control" id="song-{i}" name="song-{i}" rows="2" placeholder="Eg. Michael Jackson"></textarea>
-                                    <small class="error">A song is required.</small>
-                                </div>
-                            </fieldset>
-                            <button type="button" data-remove-guest class="btn btn-primary btn-danger">
-                                <i class="fa fa-close"></i>&nbsp; Remove</button>
-                            <button type="button" data-add-guest class="btn btn-primary float-xs-right">
-                                <i class="fa fa-plus"></i>&nbsp; Add Guest</button>
-                        </div>
-
-                        <!-- /.form-rsvp-entry -->
-                        
-<!-- SUBMIT --><button type="submit" class="btn btn-primary btn-block btn-lg">
-                            <i class="fa fa-envelope"></i>&nbsp; Finish and send
-                            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-                        </button>
-                    </form>
-
-                    <!-- IF ERROR -->
-                    <div id="form-rsvp-error" class="text-xs-center alert alert-danger alert-dismissible fade in mb-2" role="alert" hidden>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4>Oops!</h4>
-                        <p>Something went wrong. Please check your details.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- INSTAGRAM -->
-        <section id="instagram" class="section section-instagram" hiddenx>
-            <div class="container text-xs-center">
-                <header class="mb-3">
-                    <h2>
-                        <i class="fa fa-instagram"></i>&nbsp; Instagram</h2>
-                </header>
-                <ul id="instafeed" class="instafeed block-grid-xs-3 block-grid-md-5 block-grid-condensed"></ul>
-                <div class="spacer mb-3"></div>
-                <div class="h2 text-muted mb-2">#THEWEDDINGWARREN</div>
-                <p class="mb-0 text-xs-center">
-                    <img width="300" src="/assets/img/layout/leaves-bottom.png" alt="Leaves">
-                </p>
             </div>
         </section>
 
@@ -431,10 +604,12 @@
             <!-- FOOTER BOTTOM -->
             <section class="global-footer-bottom">
                 <div class="container">
-                    <small>&copy; 2017</small>
+                    <small>&copy; 2017 |
+                        <a href="/before/">visit original site</a>
+                    </small>
                     <small>
                         <span class="float-xs-right">
-                            <img width="16" height="16" src="/assets/img/ui/liquidvisual-logo.svg" alt="Created by Mitch"> site by
+                            <img width="16" height="16" src="/assets/img/ui/liquidvisual-logo.svg" alt="Created by Mitch"> by
                             <a class="author-logo" target="_blank" href="http://liquidvisual.com">liquidvisual</a>
                         </span>
                     </small>
@@ -453,28 +628,23 @@
                 </a>
             </li>
             <li class="">
-                <a class="top-parent-anchor" href="#event-details">
-                    <span class="text">Event Details</span>
+                <a class="top-parent-anchor" href="#the-gallery">
+                    <span class="text">Gallery</span>
                 </a>
             </li>
             <li class="">
-                <a class="top-parent-anchor" href="#accommodation">
-                    <span class="text">Accommodation</span>
+                <a class="top-parent-anchor" href="#photobooth">
+                    <span class="text">Photobooth</span>
                 </a>
             </li>
             <li class="">
-                <a class="top-parent-anchor" href="#wishing-well">
-                    <span class="text">Wishing Well</span>
-                </a>
-            </li>
-            <li class="">
-                <a class="top-parent-anchor" href="#instagram">
-                    <span class="text">Instagram</span>
+                <a class="top-parent-anchor" href="#credits">
+                    <span class="text">Credits</span>
                 </a>
             </li>
             <li class="featured">
-                <a class="top-parent-anchor" href="#rsvp-now">
-                    <span class="text">RSVP Now</span>
+                <a class="top-parent-anchor" href="#submit-your-photos">
+                    <span class="text">Submit Your Photos!</span>
                 </a>
             </li>
         </ul>
@@ -489,8 +659,8 @@
     <![endif]-->
 
     <!-- **** JAVASCRIPT **** -->
-    <script src="//rawgit.com/stevenschobert/instafeed.js/master/instafeed.min.js"></script>
-    <script src="/assets/scripts/minified.js"></script>
+    
+<!-- <script src="/_bower_components/jquery/dist/jquery.min.js"></script> --><script src="/assets/scripts/minified.js"></script>
 
     <!-- NO JAVASCRIPT WARNING -->
     <noscript>

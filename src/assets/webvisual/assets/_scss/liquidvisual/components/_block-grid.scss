@@ -1,7 +1,7 @@
 /*
     BLOCK-GRID.CSS
 
-    - Last updated: 06.10.16
+    - Last updated: 19.04.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -18,6 +18,8 @@ $grid-gutter-width: 30px !default;
 // https://github.com/zurb/foundation/blob/f755d8704123f86c281ede0b171881e2672f150d/scss/foundation/components/_block-grid.scss
 // Original LESS Version by Christopher Mitchell (https://gist.github.com/ChrisTM)
 // Converted to SCSS by Rasmus Jürs (https://github.com/Jursdotme)
+//
+// TIP: If top margin issue, make sure block-grid-xs-1 is always applied
 //-----------------------------------------------------------------
 
 [class*="block-grid-"] {
@@ -37,11 +39,6 @@ $grid-gutter-width: 30px !default;
   height: auto;
   float: left;
 }
-
-// // IE9 HACK
-// .lt-ie10 [class*="block-grid-"] > li {
-//   // padding: 0 ($grid-gutter-width/2) $grid-gutter-width ($grid-gutter-width/2);
-// }
 
 // MS EDGE HACK
 // @supports (-ms-accelerator:true) {
@@ -69,7 +66,7 @@ $grid-gutter-width: 30px !default;
 //=========================================
 
 @mixin set-margins($unit) {
-  margin-top: $unit; // fixed!
+  margin-top: $unit; // fixed!!!!!!!!!!!!!!!!!!!!!!!
   margin-bottom: $unit;
 }
 

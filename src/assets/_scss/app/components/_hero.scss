@@ -17,30 +17,22 @@ $hero-height-lg:            rem-calc(768) !default;
 $hero-carousel-bullet-size: rem-calc(16)  !default;
 
 //-----------------------------------------------------------------
-// Hero Wrapper
-//
-// Used to align the controls relative to the container
+// HERO WRAPPER
 //-----------------------------------------------------------------
 
 .lv-hero-wrapper {
     position: relative;
-    // position: fixed;
-    // top: 0;
-    // width: 100%;
+    overflow: hidden;
 }
 
 //-----------------------------------------------------------------
-// Hero
-//
-// By design, mobile defaults to 'auto'
+// HERO
 //-----------------------------------------------------------------
 
 .lv-hero {
-    width: 100%; // added last minute - breaking?
-    overflow: hidden; // causes problems without JS
+    // width: 100%; // added last minute - breaking?
     height: $hero-height-sm;
-    background: url(/assets/img/content/hero/trees-tinted.jpg) no-repeat center center;
-    background-size: cover;
+    overflow: hidden; // causes problems without JS
 
     @include media-breakpoint-up(md) {
         height: $hero-height-md;
@@ -49,36 +41,6 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
     @include media-breakpoint-up(lg) {
         height: $hero-height-lg;
     }
-
-    //=========================================
-    // Has Auto Height
-    //
-    // * Will override above at all sizes
-    // * Height determined by inner caption
-    //=========================================
-
-    &.has-auto-height {
-        height: auto;
-    }
-
-    //=========================================
-    // Has Fixed Height
-    //
-    // * Used on internal pages to set a height
-    //=========================================
-
-    &.has-fixed-height {
-        height: rem-calc(150); //$hero-height-sm;
-        background-position: center center;
-
-        @include media-breakpoint-up(md) { // added - refactor
-           height: rem-calc(300);
-        }
-
-        @include media-breakpoint-up(xl) {
-           height: $hero-height-md-fixed;
-        }
-    }
 }
 
 //-----------------------------------------------------------------
@@ -86,13 +48,23 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
 //-----------------------------------------------------------------
 
 .lv-hero-item {
-    float: left;
+    // float: left;
     width: 100%; // need
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: rgba($brand-primary, 0.2);
+    // background-color: rgba($brand-primary, 0.2);
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
 
     //=========================================
     // For Positioning Captions

@@ -1,0 +1,117 @@
+---
+layout: base
+---
+
+{% assign settings = site.data.settings %}
+
+<script>
+	// This object must be defined before the lazysizes script. A basic example:
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    //only for demo in production I would use normal expand option
+    // window.lazySizesConfig.expand = 300;
+    // window.lazySizesConfig.loadMode = 1;
+</script>
+
+<script src="https://cdn.jsdelivr.net/g/lazysizes(lazysizes.min.js)" async></script>
+
+<!-- HEADER -->
+<header class="global-header fixed-top">
+	<div class="container">
+	    {% include header.html %}
+
+	    <!-- NAVIGATION -->
+	    <nav class="global-navigation hidden-sm-down" data-scroll-highlight>
+		    <div class="topbar">
+		        {% include snippets/navigation.html sitemap=site.data.sitemap_after %}
+		    </div>
+	    </nav>
+    </div>
+</header>
+
+{% include hero.html %}
+
+<!-- THE GALLERY -->
+<section id="the-gallery" class="section pt-2">
+	<div class="container text-xs-center">
+		<header class="mb-3">
+			<h2>THE GALLERY</h2>
+		</header>
+
+		<a href="/gallery/"><img width="100%" src="/assets/img/layout/gallery-preview@2x.jpg" alt="Gallery Preview"></a>
+		<p class="text-xs-center"><a href="/gallery/" class="btn btn-lg btn-primary">Visit Gallery <i class="fa fa-external-link"></i></a></p>
+	</div>
+</section>
+
+<!-- PHOTOBOOTH -->
+<section id="photobooth" class="section section-photobooth">
+	<div class="container text-xs-center">
+
+		<header class="mb-3">
+			<h2>Photobooth</h2>
+			<img style="width: 3.125rem; margin: -4px 0 0 10px;" src="/assets/img/ui/swipe-right-white.svg">
+		</header>
+
+		<div class="popup-gallery list-photobooth">
+			{% for i in (1..82) %}
+				<a title="Photo {{ i }}" href="//images.weserv.nl/?url=liquidvisual.net/theweddingwarren.com/photobooth/all/photobooth-{{i}}.jpg&w=150&q=70">
+					<img width="150" class="lazyload" data-src="//images.weserv.nl/?url=liquidvisual.net/theweddingwarren.com/photobooth/all/photobooth-{{i}}.jpg&w=150&q=70">
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<script src="//rawgit.com/stevenschobert/instafeed.js/master/instafeed.min.js"></script>
+
+<!-- INSTAGRAM -->
+<section id="submit-your-photos" class="section section-instagram" hiddenX>
+	<div class="container text-xs-center">
+
+		<header class="mb-3" style="max-width: 900px; margin: auto;">
+			<h2 class="mb-2"><i class="fa fa-instagram"></i>&nbsp; Submit Your Photos</h2>
+			<p>We'd love if you would share your own photos with us. If you have instagram, use the hashtag <strong>#theweddingwarren</strong> and they'll appear below. Alternatively, <a href="mailto:theweddingwarren@gmail.com">please email us!</a></p>
+		</header>
+
+		<ul id="instafeed" class="instafeed block-grid-xs-3 block-grid-md-5 block-grid-condensed"></ul>
+	</div>
+</section>
+
+<!-- CREDITS -->
+<section id="credits" class="section section-credits">
+	<div class="container text-xs-center">
+
+		<header class="mb-3">
+			<h2>Credits</h2>
+		</header>
+
+		<table class="table-credits text-xs-left mb-2">
+			<thead hidden>
+				<tr>
+					<th>Item</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for item in site.data.credits %}
+					<tr>
+						<th>{{ item.title | upcase }}</th>
+						<td><a target="_blank" href="{{ item.url }}">{{ item.desc }}</a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<img width="60" src="/assets/img/layout/jar@2x.png" alt="Wishing Well Jar">
+
+	</div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="section section-countdown">
+	<div class="container text-xs-center">
+		<header class="mb-3">
+			<h2>HAPPILY MARRIED FOR</h2>
+		</header>
+		<div class="countdown" data-countdown></div>
+	</div>
+</section>

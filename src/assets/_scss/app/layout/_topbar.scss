@@ -24,13 +24,15 @@ $dropdowns-have-anchor-borders : true;
 //-----------------------------------------------------------------
 
 .global-navigation {
-    position: absolute; // [LOCKED]
-    top: 0;
-    width: 100%;
-    z-index: 9999;
+    // position: absolute; // [LOCKED]
+    // top: 0;
+    // width: 100%;
+    // z-index: 9999;
+    position: relative; // [LOCKED]
+    margin: 0 0 0 auto;
 
     > .container {
-        position: relative;
+        // position: relative;
     }
 }
 
@@ -39,10 +41,7 @@ $dropdowns-have-anchor-borders : true;
 //-----------------------------------------------------------------
 
 .topbar {
-    position: absolute; // [LOCKED]
-    top: 8px;
-    right: $container-gutter / 2;
-    // width: 100%; // [LOCKED for full]
+
 }
 
 //-----------------------------------------------------------------
@@ -64,12 +63,11 @@ $dropdowns-have-anchor-borders : true;
 //=========================================
 
 .topbar > ul {
-    display: table;
-    float: right;
+    display: flex;
+    flex-wrap: wrap;
 
     > li {
         position: relative; // [LOCKED]
-        float: left; // prevents hairline weirdness
         margin: 0; // reset
     }
 

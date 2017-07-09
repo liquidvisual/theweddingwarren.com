@@ -11,95 +11,143 @@
 
 $(window).on('load', function() {
     $('html').addClass('has-loaded');
-    $('input, textarea').placeholder(); // IE9 Patch
-
-    // GOOGLE MAP
-    $('iframe').each(function(){
-        var $this = $(this);
-        var dataSrc = $(this).attr('data-src');
-        $this.attr('src', dataSrc);
-        console.log(dataSrc);
-    });
+    lightbox();
+    createGoogleMap();
 });
 
-$(function() {
+//-----------------------------------------------------------------
+// GOOGLE MAP
+//-----------------------------------------------------------------
 
-    //-----------------------------------------------------------------
-    // COUNTDOWN
-    //-----------------------------------------------------------------
+function createGoogleMap() {
+    if ($('iframe').length == 1) {
+        $('iframe').each(function(){
+            var $this = $(this);
+            var dataSrc = $(this).attr('data-src');
+            $this.attr('src', dataSrc);
+            console.log(dataSrc);
+        });
+    }
+}
 
-    // $('#countdown').countdown('2017/03/17 18:00:00', function(event) {
-    //   var $this = $(this).html(event.strftime(''
-    //     + '<ul class="block-grid-xs-5">'
-    //     // + '<li class="digit-box"><span class="digit">%m</span><span class="text">Months</span></li>'
-    //     + '<li class="digit-box"><span class="digit">%w</span><span class="text">Weeks</span></li>'
-    //     + '<li class="digit-box"><span class="digit">%d</span><span class="text">Days</span></li>'
-    //     + '<li class="digit-box"><span class="digit">%H</span><span class="text">Hours</span></li>'
-    //     + '<li class="digit-box"><span class="digit">%M</span><span class="text">Minutes</span></li>'
-    //     + '<li class="digit-box"><span class="digit">%S</span><span class="text">Seconds</span></li>'
-    //     + '</ul>'));
-    // });
+//-----------------------------------------------------------------
+// POPUP GALLERY
+//-----------------------------------------------------------------
 
-    //-----------------------------------------------------------------
-    // LAUNCH MANAGE ON KEYPRESS
-    //-----------------------------------------------------------------
-
-    key('⌘+shift+m, ctrl+shift+m', function(){
-      window.location = '/manage/';
+function lightbox() {
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title') + '<small><a href="https://www.jasondeplater.com">Jason de Plater Photography</a></small><br>';
+            }
+        }
     });
 
-    //-----------------------------------------------------------------
-    // HEADROOM.js
-    //-----------------------------------------------------------------
+    //==================================================
+    //
+    //==================================================
 
-    $(".global-header").headroom({
-        // vertical offset in px before element is first unpinned
-        offset : 60,
-        // scroll tolerance in px before state changes
-        tolerance : 0,
-        // or you can specify tolerance individually for up/down scroll
-        tolerance : {
-            up : 5,
-            down : 0
+    $('.list-photobooth').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
         },
-        // css classes to apply
-        classes : {
-            // when element is initialised
-            initial : "headroom",
-            // when scrolling up
-            pinned : "headroom--pinned",
-            // when scrolling down
-            unpinned : "headroom--unpinned",
-            // when above offset
-            top : "headroom--top",
-            // when below offset
-            notTop : "headroom--not-top",
-            // when at bottom of scoll area
-            bottom : "headroom--bottom",
-            // when not at bottom of scroll area
-            notBottom : "headroom--not-bottom"
-        },
-        // element to listen to scroll events on, defaults to `window`
-        // scroller : someElement,
-        // callback when pinned, `this` is headroom object
-        onPin : function() {},
-        // callback when unpinned, `this` is headroom object
-        onUnpin : function() {},
-        // callback when above offset, `this` is headroom object
-        onTop : function() {},
-        // callback when below offset, `this` is headroom object
-        onNotTop : function() {},
-        // callback when at bottom of page, `this` is headroom object
-        onBottom : function() {},
-        // callback when moving away from bottom of page, `this` is headroom object
-        onNotBottom : function() {}
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title') + '<small></small>';
+            }
+        }
     });
+}
 
-//--
+lightbox();
+
+//-----------------------------------------------------------------
+// COUNTDOWN - OLD CODE, KEEP FOR REFERENCE
+//-----------------------------------------------------------------
+
+// $('#countdown').countdown('2017/03/17 18:00:00', function(event) {
+//   var $this = $(this).html(event.strftime(''
+//     + '<ul class="block-grid-xs-5">'
+//     // + '<li class="digit-box"><span class="digit">%m</span><span class="text">Months</span></li>'
+//     + '<li class="digit-box"><span class="digit">%w</span><span class="text">Weeks</span></li>'
+//     + '<li class="digit-box"><span class="digit">%d</span><span class="text">Days</span></li>'
+//     + '<li class="digit-box"><span class="digit">%H</span><span class="text">Hours</span></li>'
+//     + '<li class="digit-box"><span class="digit">%M</span><span class="text">Minutes</span></li>'
+//     + '<li class="digit-box"><span class="digit">%S</span><span class="text">Seconds</span></li>'
+//     + '</ul>'));
+// });
+
+//-----------------------------------------------------------------
+// LAUNCH MANAGE ON KEYPRESS
+//-----------------------------------------------------------------
+
+key('⌘+shift+m, ctrl+shift+m', function(){
+  window.location = '/before/';
 });
 
+//-----------------------------------------------------------------
+// HEADROOM.js
+//-----------------------------------------------------------------
 
-// GLOBAL SCOPE - CHEAP
+$(".global-header").headroom({
+    // vertical offset in px before element is first unpinned
+    offset : 60,
+    // scroll tolerance in px before state changes
+    tolerance : 0,
+    // or you can specify tolerance individually for up/down scroll
+    tolerance : {
+        up : 5,
+        down : 0
+    },
+    // css classes to apply
+    classes : {
+        // when element is initialised
+        initial : "headroom",
+        // when scrolling up
+        pinned : "headroom--pinned",
+        // when scrolling down
+        unpinned : "headroom--unpinned",
+        // when above offset
+        top : "headroom--top",
+        // when below offset
+        notTop : "headroom--not-top",
+        // when at bottom of scoll area
+        bottom : "headroom--bottom",
+        // when not at bottom of scroll area
+        notBottom : "headroom--not-bottom"
+    },
+    // element to listen to scroll events on, defaults to `window`
+    // scroller : someElement,
+    // callback when pinned, `this` is headroom object
+    onPin : function() {},
+    // callback when unpinned, `this` is headroom object
+    onUnpin : function() {},
+    // callback when above offset, `this` is headroom object
+    onTop : function() {},
+    // callback when below offset, `this` is headroom object
+    onNotTop : function() {},
+    // callback when at bottom of page, `this` is headroom object
+    onBottom : function() {},
+    // callback when moving away from bottom of page, `this` is headroom object
+    onNotBottom : function() {}
+});
 
 //-----------------------------------------------------------------
 // SCROLLTO ANYTHING WITH AN ID
@@ -107,23 +155,24 @@ $(function() {
 // pass #id as target - window will scroll to it
 //-----------------------------------------------------------------
 
-function scrollTo(target) {
-    var href = target,
-        offsetTop = href === "#" ? 0 : $(href).offset().top;
-    $('html, body').stop().animate({
-        scrollTop: offsetTop
-    }, 800);
-    return false;
-}
+// function scrollTo(target) {
+//     var href = target,
+//         offsetTop = href === "#" ? 0 : $(href).offset().top;
+//     $('html, body').stop().animate({
+//         scrollTop: offsetTop
+//     }, 800);
+//     return false;
+// }
 
 //==================================================
 // PLACE ON CLICKS
 //==================================================
 
-$('a[href*="#"]:not([href="#"])').click(function(event) {
-    event.preventDefault();
-    scrollTo($(this).attr('href'));
-});
+// $('a[href*="#"]:not([href="#"])').click(function(event) {
+//     event.preventDefault();
+//     scrollTo($(this).attr('href'));
+//     return true;
+// });
 
 //==================================================
 //

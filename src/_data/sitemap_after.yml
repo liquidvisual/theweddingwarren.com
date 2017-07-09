@@ -1,0 +1,15 @@
+- title: Home
+  url: "/#home"
+
+- title: Gallery
+  url: "/#the-gallery"
+
+- title: Photobooth
+  url: "/#photobooth"
+
+- title: Credits
+  url: "/#credits"
+
+- title: Submit Your Photos!
+  url: "/#submit-your-photos"
+  featured: true

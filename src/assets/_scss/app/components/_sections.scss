@@ -153,6 +153,36 @@
 }
 
 //-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.section-photobooth {
+	position: relative;
+	background: $brand-primary;
+
+	&:after {
+		@include media-breakpoint-up(md) {
+		    content: "";
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 100%;
+		    width: rem-calc(60);
+		    background: linear-gradient(to left, rgba($brand-primary, 1) 80%, rgba($brand-primary, 0.0) 100%);
+		}
+
+		@include media-breakpoint-up(lg) {
+		    width: rem-calc(140);
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: white;
+		border-color: white;
+	}
+}
+
+//-----------------------------------------------------------------
 // EVENT DETAILS + ACCOMMODATION [SPLIT]
 //-----------------------------------------------------------------
 
@@ -271,6 +301,9 @@
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
+
+
+
 //=========================================
 //
 //=========================================

@@ -1,0 +1,41 @@
+/*
+    TABLES.CSS
+
+    - Last updated: 06.06.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// TABLES
+//-----------------------------------------------------------------
+
+.table-credits {
+    @include media-breakpoint-up(md) {
+        width: rem-calc(700);
+        margin: 0 auto;
+        table-layout: fixed;
+    }
+
+    tr {
+        border-bottom: 1px solid rgba($gray-light, 0.05);
+    }
+
+    td {
+        padding: 2px;
+    }
+
+    th {
+        padding-right: rem-calc(20);
+        // text-align: right;
+    }
+
+    a {
+        font-weight: normal;
+    }
+}
+
+//=========================================
+//
+//=========================================

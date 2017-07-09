@@ -42,24 +42,18 @@ $header-height-lg: 220px !default;
 	box-shadow: 0 0 3px 1px rgba(black, 0.2);
 
 	> .container {
-		position: relative;
-	}
-}
+		display: flex;
+		align-items: center;
 
-//=========================================
-// HEADER HEIGHT [LOCKED]
-//=========================================
+		height: $header-height-sm;
 
-.global-header,
-.global-header .display-table {
-	height: $header-height-sm;
+		@include media-breakpoint-up(md) {
+		    height: $header-height-md;
+		}
 
-	@include media-breakpoint-up(md) {
-	    height: $header-height-md;
-	}
-
-	@include media-breakpoint-up(xl) {
-		height: $header-height-lg;
+		@include media-breakpoint-up(xl) {
+			height: $header-height-lg;
+		}
 	}
 }
 
@@ -71,18 +65,6 @@ $header-height-lg: 220px !default;
 	position: relative;
 	top: 0;
 	display: inline-block;
-
-	@include media-breakpoint-up(md) {
-	    top: 0;
-	}
-
-	@include media-breakpoint-up(lg) {
-	    top: 0;
-	}
-
-	@include media-breakpoint-up(xl) {
-	    top: 0;
-	}
 
 	.text {
 		color: white;
@@ -110,15 +92,9 @@ $header-height-lg: 220px !default;
 //-----------------------------------------------------------------
 
 .global-mobile-menu {
-	position: absolute;
-	top: 18px;//$container-gutter;
-	right: $container-gutter/2;
-	overflow: hidden;
-
-	@include media-breakpoint-up(md) {
-	    // top: 30px;
-	    right: $container-gutter;
-	}
+	position: relative;
+	top: 3px;
+	margin-left: auto;
 }
 
 //=========================================

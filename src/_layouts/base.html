@@ -16,6 +16,7 @@
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,700">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- FAV ICONS -->
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -31,20 +32,6 @@
 
     <div id="home" class="lv-page">
 
-        <!-- HEADER -->
-        <header class="global-header fixed-top">
-            {% include header.html %}
-
-            <!-- NAVIGATION -->
-            <nav class="global-navigation hidden-lg-down" data-scroll-highlight>
-                <div class="container">
-                    <div class="topbar">
-                        {% include snippets/navigation.html %}
-                    </div>
-                </div>
-            </nav>
-        </header>
-
         {{ content }}
 
         <!-- FOOTER -->
@@ -56,7 +43,7 @@
 
     <!-- OFF-CANVAS MENU -->
     <nav class="lv-off-canvas" data-off-canvas-menu aria-hidden="true">
-        {% include snippets/navigation.html %}
+        {% include snippets/navigation.html sitemap=site.data.sitemap_after %}
     </nav>
 
     <!--[if lte IE 9]>
@@ -69,16 +56,15 @@
 
     <!-- **** JAVASCRIPT **** -->
 
-    <script src="//rawgit.com/stevenschobert/instafeed.js/master/instafeed.min.js"></script>
+    <!-- <script src="/_bower_components/jquery/dist/jquery.min.js"></script> -->
 
     <!-- build:js(src) /assets/scripts/minified.js -->
-    <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/tether/dist/js/tether.min.js"></script>
     <script src="/_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/_bower_components/bootstrap-validator/dist/validator.min.js"></script>
     <script src="/_bower_components/bxSlider/dist/jquery.bxslider.min.js"></script>
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+
     <script src="/assets/webvisual/assets/scripts/liquidvisual/alert-bar.js"></script>
     <script src="/assets/webvisual/assets/scripts/liquidvisual/equal-height.js"></script>
     <script src="/assets/webvisual/assets/scripts/liquidvisual/hero.js"></script>
@@ -89,10 +75,12 @@
     <script src="/assets/scripts/vendor/countdown.js"></script>
     <script src="/assets/scripts/vendor/headroom.js"></script>
     <script src="/assets/scripts/vendor/scroll-highlight.js"></script>
+    <script src="/assets/scripts/vendor/jquery.scrollTo-1.4.3.1-min.js"></script>
 
     <script src="/assets/scripts/countdown.js"></script>
     <script src="/assets/scripts/off-canvas.js"></script>
     <script src="/assets/scripts/form-rsvp.js"></script>
+    <script src="/assets/scripts/gallery.js"></script>
     <script src="/assets/scripts/instafeed.js"></script>
     <script src="/assets/scripts/main.js"></script>
     <!-- endbuild -->

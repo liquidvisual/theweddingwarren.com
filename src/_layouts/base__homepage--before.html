@@ -4,7 +4,55 @@ layout: base
 
 {% assign settings = site.data.settings %}
 
-{% include hero.html %}
+{% assign hero_images = site.data.carousel_slides %}
+
+<!-- HEADER -->
+<header class="global-header fixed-top">
+	<div class="container">
+	    {% include header.html %}
+
+	    <!-- NAVIGATION -->
+	    <nav class="global-navigation hidden-md-down" data-scroll-highlight>
+		    <div class="topbar">
+		        {% include snippets/navigation.html sitemap=site.data.sitemap_before %}
+		    </div>
+	    </nav>
+    </div>
+</header>
+
+<div class="lv-hero-wrapper">
+
+    <!-- HERO -->
+    <div class="lv-hero">
+
+        {% for hero in hero_images %}
+
+            <!-- HERO ITEM -->
+            <div class="lv-hero-item" style="background-image: url(/assets/img/content/hero/trees-tinted.jpg)">
+                <div class="lv-hero-item-table">
+                    <div class="lv-hero-item-cell v-align-middle">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 offset-lg-3 text-xs-center">
+                                    <div class="lv-hero-item-caption animated fadeInLeft">
+                                        <h1>
+                                            <span class="mitch">Mitchell</span>
+                                            <span class="anne"><span class="ampersand">&amp;</span> Anne</span>
+                                            <span class="desc">Are getting married</span>
+                                        </h1>
+                                        <date>17 March 2017</date>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div> <!-- /.lv-hero -->
+</div> <!-- /.lv-hero-wrapper -->
 
 <!-- THE COUPLE -->
 <section class="section section-couple" hiddenX>
@@ -54,7 +102,7 @@ layout: base
 <section class="section section-countdown">
 	<div class="container text-xs-center">
 		<header class="mb-3">
-			<h2>MARRIED FOR</h2>
+			<h2>The Big Day</h2>
 		</header>
 		<div class="countdown" data-countdown></div>
 	</div>
@@ -178,6 +226,8 @@ layout: base
 	</div>
 </section>
 
+<script src="//rawgit.com/stevenschobert/instafeed.js/master/instafeed.min.js"></script>
+
 <!-- INSTAGRAM -->
 <section id="instagram" class="section section-instagram" hiddenX>
 	<div class="container text-xs-center">
@@ -185,7 +235,6 @@ layout: base
 		<header class="mb-3">
 			<h2><i class="fa fa-instagram"></i>&nbsp; Instagram</h2>
 		</header>
-
 
 		<ul id="instafeed" class="instafeed block-grid-xs-3 block-grid-md-5 block-grid-condensed"></ul>
 		<div class="spacer mb-3"></div>

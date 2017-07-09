@@ -13,13 +13,13 @@
 
 .lv-page-loader {
     display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: $brand-primary;
-  z-index: 2147483647;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $brand-primary;
+    z-index: 2147483647;
     opacity: 1;
 
     &.force-finish {
@@ -36,7 +36,7 @@ html.has-loaded .lv-page-loader {
 //-----------------------------------------------------------------
 
 html[data-dev-mode] .lv-page-loader {
-    visibility: hidden;
+    // visibility: hidden;
 }
 
 //-----------------------------------------------------------------

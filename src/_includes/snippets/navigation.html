@@ -17,7 +17,7 @@
 -->
 {% endcomment %}
 
-{% assign sitemap = site.data.sitemap %}
+{% assign sitemap = include.sitemap | default: site.data.sitemap %}
 
 <ul>
     {% for item in sitemap %}

@@ -1,10 +1,11 @@
 /*
-    SCROLL HIGHLIGHT - Last updated: 13.12.16
+    SCROLL HIGHLIGHT - Last updated: 10.06.17
 
     - Notes -
 
      An alternative to Foundation's Magellan:
      http://jsfiddle.net/mekwall/up4nu/
+     replace with: https://codepen.io/rpora/pen/wBaLPp
 */
 //-----------------------------------------------------------------
 // Variables
@@ -17,30 +18,33 @@ var menuItems = $("[data-scroll-highlight]"); // All list items
 //-----------------------------------------------------------------
 
 // Cache selectors
-var lastId,
-    topMenu = menuItems,
-    topMenuHeight = topMenu.outerHeight()+90,
-    // All list items
-    menuItems = topMenu.find("a"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
-    });
+var lastId;
+var topMenu = menuItems;
+var topMenuHeight = topMenu.outerHeight()+60;
 
-//-----------------------------------------------------------------
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-//-----------------------------------------------------------------
+// All list items
+var menuItems = topMenu.find("a");
 
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({
-      scrollTop: offsetTop
-  }, 300);
-  e.preventDefault();
+// Anchors corresponding to menu items
+var scrollItems = menuItems.map(function(){
+  var item = $($(this).attr("href").slice(1));
+  if (item.length) { return item; }
 });
+
+//-----------------------------------------------------------------
+// ON CLICK
+//-----------------------------------------------------------------
+
+$('.topbar .top-parent-anchor').click(function(event) {
+    var id = $(this).attr('href').slice(1);
+    var endPos = $(id);
+    id == '#home' ? $.scrollTo(endPos, 300) : $.scrollTo(endPos.offset().top-60, 300);
+    return false;
+});
+
+//-----------------------------------------------------------------
+// ON SCROLL
+//-----------------------------------------------------------------
 
 // Bind to scroll
 $(window).scroll(function(){
@@ -61,17 +65,22 @@ $(window).scroll(function(){
        // Set/remove active class
        menuItems
          .parent().removeClass("active")
-         .end().filter("[href='#"+id+"']").parent().addClass("active");
+         .end().filter("[href='/#"+id+"']").parent().addClass("active");
    }
 
-   // console.log($(this).scrollTop());
+    //==================================================
+    // added hacky - rsvp is out of order for style reasons
+    //==================================================
 
-   // added hacky - rsvp is out of order for style reasons
-   if ($(this).scrollTop() >= 4991) {
-      $('a[href="#instagram"]').parent().addClass('active');
-   } else {
-      $('a[href="#instagram"]').parent().removeClass('active')
-   }
+    if ($(this).scrollTop() >= 4290) {
+        $('a[href="/#credits"]').parent().addClass('active');
+    }
+    else if ($(this).scrollTop() >= 4991) {
+        $('a[href="/#instagram"]').parent().addClass('active');
+    } else {
+        $('a[href="/#instagram"]').parent().removeClass('active');
+        $('a[href="/#credits"]').parent().removeClass('active');
+    }
 });
 
 //==================================================

@@ -13,6 +13,9 @@
 
 .block-grid-condensed {
 	margin: -($grid-gutter-width/6);
+
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .block-grid-condensed > li,
@@ -20,15 +23,42 @@
 	padding: ($grid-gutter-width/6);
 }
 
-// .portrait {
-// 	display: inline-block;
-// 	height: 232px;
-// 	overflow: hidden;
-// }
+//-----------------------------------------------------------------
+// LIST MASONRY
+//-----------------------------------------------------------------
 
-//-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
+.list-photobooth {
+    display: flex;
+    // flex-wrap: nowrap;
+    // white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    // -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    a {
+        flex: 0 0 auto;
+        // flex: none;
+    	// display: inline-block;
+        // display: block;
+		padding: rem-calc(15 15 0 15);
+		margin-right: rem-calc(20);
+		margin-bottom: rem-calc(30);
+		min-height: 100px;
+		box-shadow: 0 5px 10px rgba(black, 0.2);
+        background: white url(/assets/img/layout/heart.png) center center no-repeat;
+        background-size: 30px;
+        border: 1px solid white;
+    }
+
+    img {
+        margin-bottom: 10px;
+
+        @include media-breakpoint-down(sm) {
+            width: 210px;
+        }
+    }
+}
+
 //=========================================
 //
 //=========================================
